@@ -1,0 +1,140 @@
+
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000; /* Cor do logo */
+    padding-left: 12%;
+}
+
+.introducao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw; /* Espaço entre o texto e a imagem */
+    padding: 10vh 5vw;
+    width: 100%;
+    flex-wrap: wrap; /* Permite quebrar em telas pequenas */
+    margin-bottom: 80px;
+}
+
+.texto {
+    flex: 1;
+    max-width: 40%; /* Para evitar que o texto fique muito espalhado */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.imagem {
+    width: 40vw; /* Define um tamanho proporcional */
+    max-width: 500px; /* Limite para não crescer demais */
+    height: auto;
+}
+
+.imagem img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.desenvolvimento {
+    width: 100%;
+    clear: both;
+    text-align: center;
+}
+.imagens_cerimonia {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+.cerimonia {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza imagem e texto */
+    text-align: center;
+    max-width: 400px;
+}
+
+.cerimonia img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.cerimonia p {
+    margin-top: 10px; /* Espaço entre imagem e texto */
+    font-size: 24px;
+    color: #333;
+}
+.desenvolvimento-2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza verticalmente (caso precise) */
+    text-align: left;
+    gap: 50px;
+    padding-top: 50px;
+    width: 100%;
+}
+.imagem_cerimonia_desenvolvimento-2 {
+    width: 704px;
+    height: 704px; /* Garante que a altura e a largura sejam iguais, formando um quadrado */
+    overflow: hidden; /* Oculta qualquer parte da imagem que ultrapasse o tamanho do container */
+}
+
+.imagem_cerimonia_desenvolvimento-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Isso vai cortar e ajustar a imagem para preencher o container */
+}
+
+.desenvolvimento-2_texto {
+    max-width: 600px; 
+    display: flex;
+    flex-direction: column; /* Alinha os itens na coluna */
+    gap: 30px; /* Adiciona espaçamento entre os elementos filhos */
+    font-size: 24px;
+    color: #333;
+}
+.desenvolvimento-3{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.desenvolvimento-3_imagens{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+    width: 70%;
+    height: 437px; /* Garante que a altura e a largura sejam iguais, formando um quadrado */
+    overflow: hidden; /* Oculta qualquer parte da imagem que ultrapasse o tamanho do container */
+}
+.desenvolvimento-3_imagens img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Isso vai cortar e ajustar a imagem para preencher o container */
+}
+.FAQ{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centraliza verticalmente (caso precise) */
+    text-align: left; 
+    gap: 30px;
+    margin-top: 30px;
+}
