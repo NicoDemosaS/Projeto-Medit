@@ -14,6 +14,16 @@ header {
     padding-left: 12%;
 }
 
+.pre-introducao{
+    display: flex; /* Remove espaços extras */
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite quebrar em telas pequenas */
+    width: 100vw; /* 100% da largura da tela */
+    height: auto; /* Mantém a proporção */
+   
+}
+
 .introducao {
     display: flex;
     align-items: center;
@@ -46,10 +56,11 @@ header {
     object-fit: cover;
 }
 
-.desenvolvimento {
+.cerimonias {
     width: 100%;
     clear: both;
     text-align: center;
+    margin-top: 40px;
 }
 .imagens_cerimonia {
     display: flex;
@@ -135,6 +146,7 @@ header {
     flex-direction: row;
     justify-content: center; /* Centraliza verticalmente (caso precise) */
     text-align: left; 
-    gap: 30px;
+    gap: 100px;
     margin-top: 30px;
+    margin-bottom: 55px;
 }
