@@ -38,7 +38,7 @@ header {
     justify-content: center;
     flex-wrap: wrap; /* Permite quebrar em telas pequenas */
     width: 100%; /* 100% da largura da tela */
-    background-color: black;
+    background-color: bla;
     height: auto; /* Mantém a proporção */
    
 }
