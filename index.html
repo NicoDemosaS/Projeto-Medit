@@ -9,7 +9,15 @@
 </head>
 <body>
     <header>
-        <div class="logo">Medit</div>
+        <div class="logo">
+            <a>Medit</a>
+        </div>
+        <div class="hrefs">
+            <a>Galeria</a>
+            <a>Agenda</a>
+            <a>Quem Somos</a>
+            <a>Depoimentos</a>
+        </div>
     </header>
     <section class="pre-introducao">
         <img src="assets/espacomedit.jpeg">
@@ -76,73 +84,92 @@
     </section>
     <!-- Area de Apresentacao do Medico, construir CSS-->
     <section class="medico">
-        <div>
-            <h1>Medico</h1>
-            <h2>Doutor Bernardo</h2>
-            <p>Doutor bernado especialista medico aisudhi uashdiua shdiash diuash iduashiud ahsiud hasiudh iausdh iaushdiaus hdiuash diuahdsiuash iu</p>
+        <div class="medico-texto">
+            <h1 class="text-[60px] font-bold">Medico</h1>
+            <h2 class="text-[35px] font-semibold">Doutor Bernardo</h2>
+            <p class="text-[25px]">Dr. Bernardo é um cirurgião experiente e conhecedor da medicina tradicional, que, ao longo dos anos, integrou saberes ancestrais ao seu trabalho. Especialista na ayahuasca, tornou-se um consagrador respeitado, unindo ciência e espiritualidade para promover cura em diferentes níveis.</p>
         </div>
-        <img src="assets/medico">        
+        <img src="assets/medico.jpg">        
     </section>
     <!-- Area de Depoimentos, construir CSS-->
-    <section class="depoimentos">
-        <div>
-            <div>
-                <h1>Depoimento 1</h1>
-                <p>Texto Depoimento 1</p>
-            </div>
-            <img src="assets/videodepoimento">
+    <section>
+        <div class="depoimentos">
+            <video src="assets/videoteste.mp4" class="video-depoimento"></video>
+            <div class="depoimentos-separacao">
+                <h1 class="text-[30px] font-semibold">A Transformação Através da Ayahuasca</h1>
+                <p class="text-[25px]">"Minha experiência com a ayahuasca foi profundamente transformadora. No começo, senti resistência, mas, guiado pelo Dr. Bernardo, encontrei um espaço seguro para me conectar comigo mesmo. Durante a consagração, vivenciei uma clareza indescritível, como se camadas de medos e dúvidas fossem dissolvidas. Senti uma paz imensa e uma conexão com algo maior. Desde então, minha visão sobre a vida mudou—aprendi a lidar melhor com minhas emoções e a viver com mais propósito. Gratidão por essa jornada de cura e autoconhecimento!"
+                </p>
+            </div> 
         </div>
-        <div>
-            <img src="assets/videodepoimento">
-            <div>
-                <h1>Depoimento 2</h1>
-                <p>Texto Depoimento 2</p>
+        <div class="depoimentos">
+            <div class="depoimentos-separacao">
+                <h1 class="text-[30px] font-semibold">A Cura Interior com a Ayahuasca</h1>
+                <p class="text-[25px]"> "Minha experiência com a ayahuasca foi algo que nunca imaginei vivenciar. Guiado pelo Dr. Bernardo, senti uma abertura profunda para o meu interior, como se todas as minhas dores e bloqueios se desintegrassem. Durante a sessão, consegui enfrentar traumas antigos que estavam me impedindo de seguir em frente. Hoje, me sinto mais leve, mais consciente e em paz. A ayahuasca me ajudou a encontrar equilíbrio, e sou eternamente grato por essa transformação tão profunda e libertadora."</p>
             </div>
+            <img src="assets/Espaco3.jpg" class="video-depoimento"></video>
         </div>
     </section>
 
+    <h1 class="text-[40px] font-bold flex items-center justify-center">FAQ</h1>
     <section class="FAQ">
         <div class="desenvolvimento-2_texto">
-            <h1 class="text-[40px] font-bold">FAQ</h1>
             <div>
-                <h2 class="text-[30px] font-semibold">Pergunta</h2>  
-                <p>Resposta ASD ASODK AOSD ASODK ASODK OASDKOAS DOASK DOASK DOASKO DKASO KDOASK DOASK DOASK DOAKSO DKASOD KASODK AOSK DOASKD OASKDO ASKD OASK ODASK DOASK</p>
+                <h2 class="text-[30px] font-semibold">O que é uma consagração de ayahuasca?</h2>  
+                <p>A consagração de ayahuasca é o processo em que a bebida sagrada, composta por duas plantas (Banisteriopsis caapi e Psychotria viridis), é preparada e oferecida aos participantes durante um ritual espiritual, com o objetivo de promover cura, autoconhecimento e expansão da consciência.</p>
             </div>
             <div>
-                <h2 class="text-[30px] font-semibold">Pergunta</h2>  
-                <p>Resposta ASD ASODK AOSD ASODK ASODK OASDKOAS DOASK DOASK DOASKO DKASO KDOASK DOASK DOASK DOAKSO DKASOD KASODK AOSK DOASKD OASKDO ASKD OASK ODASK DOASK</p>
+                <h2 class="text-[30px] font-semibold">Qual é a importância do ambiente durante uma consagração de ayahuasca?</h2>  
+                <p>ambiente é fundamental para a experiência, pois deve ser seguro, tranquilo e acolhedor, favorecendo a introspecção e a conexão espiritual. A atmosfera, iluminação suave e sons relaxantes contribuem para uma experiência profunda e transformadora.</p>
             </div>
             <div>
-                <h2 class="text-[30px] font-semibold">Pergunta</h2>  
-                <p>Resposta ASD ASODK AOSD ASODK ASODK OASDKOAS DOASK DOASK DOASKO DKASO KDOASK DOASK DOASK DOAKSO DKASOD KASODK AOSK DOASKD OASKDO ASKD OASK ODASK DOASK</p>
+                <h2 class="text-[30px] font-semibold">Há necessidade de preparação para uma consagração de ayahuasca? </h2>  
+                <p>im, a preparação é importante. Geralmente, envolve dieta leve e restrições alimentares, além de um estado mental preparado para a experiência. Isso ajuda a minimizar efeitos adversos e favorece a conexão com os aspectos espirituais da cerimônia.</p>
             </div>
         </div>
 
         <div class="desenvolvimento-2_texto">
-            <h1 class="text-[40px] font-bold">FAQ</h1>
             <div>
-                <h2 class="text-[30px] font-semibold">Pergunta</h2>  
-                <p>Resposta ASD ASODK AOSD ASODK ASODK OASDKOAS DOASK DOASK DOASKO DKASO KDOASK DOASK DOASK DOAKSO DKASOD KASODK AOSK DOASKD OASKDO ASKD OASK ODASK DOASK</p>
+                <h2 class="text-[30px] font-semibold">Quais são os efeitos físicos e emocionais durante a consagração de ayahuasca? </h2>  
+                <p>Durante a consagração, os efeitos podem incluir náuseas, vômitos e visão de padrões ou imagens espirituais. Emocionalmente, os participantes podem vivenciar momentos de introspecção profunda, alívio de traumas e um sentimento de conexão com a natureza e o universo.</p>
             </div>
             <div>
-                <h2 class="text-[30px] font-semibold">Pergunta</h2>  
-                <p>Resposta ASD ASODK AOSD ASODK ASODK OASDKOAS DOASK DOASK DOASKO DKASO KDOASK DOASK DOASK DOAKSO DKASOD KASODK AOSK DOASKD OASKDO ASKD OASK ODASK DOASK</p>
+                <h2 class="text-[30px] font-semibold">A ayahuasca pode ser consumida em qualquer ambiente?</h2>  
+                <p>Não, a ayahuasca deve ser consumida em ambientes controlados e preparados para rituais sagrados, preferencialmente sob a orientação de facilitadores experientes. A segurança emocional e física dos participantes é essencial, e a bebida não deve ser consumida de forma recreativa ou sem o devido acompanhamento espiritual.</p>
             </div>
             <div>
-                <h2 class="text-[30px] font-semibold">Pergunta</h2>  
-                <p>Resposta ASD ASODK AOSD ASODK ASODK OASDKOAS DOASK DOASK DOASKO DKASO KDOASK DOASK DOASK DOAKSO DKASOD KASODK AOSK DOASKD OASKDO ASKD OASK ODASK DOASK</p>
+                <h2 class="text-[30px] font-semibold">Como o ambiente pode influenciar a experiência com a ayahuasca? </h2>  
+                <p>Um ambiente de respeito, silêncio e serenidade contribui para uma experiência mais intensa e positiva. A presença de guias ou facilitadores experientes e o uso de cânticos e instrumentos musicais também ajudam a criar uma atmosfera que favorece a cura e o equilíbrio emocional.</p>
             </div>
         </div>
     </section>
-    <footer class="bg-gray-900 text-white py-6 text-center">
-        <div class="container mx-auto">
-          <p class="text-sm">© 2025 Medit Project. Todos os direitos reservados.</p>
-          <div class="flex justify-center space-x-4 mt-2">
-            <a href="#" class="hover:text-gray-400">Política de Privacidade</a>
-            <a href="#" class="hover:text-gray-400">Termos de Uso</a>
-            <a href="#" class="hover:text-gray-400">Contato</a>
-          </div>
-        </div>
-      </footer>
+
+
+    
+   <footer class="bg-gray-900 text-white py-6">
+  <div class="container mx-auto flex justify-evenly items-center">
+    <!-- Imagem no canto esquerdo -->
+    <img src="assets/meditlogo.jpeg" alt="Logo ou imagem de ayahuasca" class="w-16 h-16">
+    
+    <!-- Frase sobre autoconhecimento e ayahuasca -->
+    <p class="text-sm text-center flex-grow px-4">"A ayahuasca é a chave para o autoconhecimento e a cura interior."</p>
+    
+    <!-- Mapa do Google -->
+    <a href="https://www.google.com/maps" target="_blank" class="hover:text-gray-400">
+      <img src="assets/icone-do-mapa.jpeg" alt="Google Maps" class="w-16 h-16">
+    </a>
+  </div>
+  
+  <!-- Links de navegação -->
+  <div class="text-center mt-2">
+    <p class="text-sm">© 2025 Medit Project. Todos os direitos reservados.</p>
+    <div class="flex justify-center space-x-4 mt-2">
+      <a href="#" class="hover:text-gray-400">Política de Privacidade</a>
+      <a href="#" class="hover:text-gray-400">Termos de Uso</a>
+      <a href="#" class="hover:text-gray-400">Contato</a>
+    </div>
+  </div>
+</footer>
+
+      
 </body>
 </html>

@@ -5,6 +5,7 @@ header {
     justify-content: flex-start;
     padding: 20px;
     background-color: #f8f8f8;
+    gap: 40%;
 }
 
 .logo {
@@ -12,6 +13,15 @@ header {
     font-weight: bold;
     color: #000000; /* Cor do logo */
     padding-left: 12%;
+}
+
+.hrefs {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000; /* Cor do logo */
+    display: flex;
+    gap: 30px;
+    justify-content: center; /* Centraliza os itens */
 }
 
 .pre-introducao{
@@ -149,4 +159,48 @@ header {
     gap: 100px;
     margin-top: 30px;
     margin-bottom: 55px;
+}
+
+.medico{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centraliza verticalmente (caso precise) */
+    margin-top: 5%;
+    gap: 8%;
+}
+.medico img{
+    width: 518px;
+    height: 486px;
+}
+
+.medico-texto{
+    width: 550px;
+    height: 486px;
+    text-align: left;
+    font-size: 24px;
+    color: #333;
+}
+
+.depoimentos{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center; /* Centraliza verticalmente (caso precise) */
+    width: 100%;
+    gap: 6%;
+    margin: 3%;
+
+}
+
+.depoimentos-separacao{
+    width: 600px;
+    gap: 20px;
+}
+
+.video-depoimento{
+    width: 550px;  /* Largura */
+    height: 450px; /* Altura */
+    object-fit: cover; /* Garante que o vídeo preencha o quadrado */
+
 }
