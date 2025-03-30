@@ -42,7 +42,6 @@ header {
     padding: 10vh 5vw;
     width: 100%;
     flex-wrap: wrap; /* Permite quebrar em telas pequenas */
-    margin-bottom: 80px;
 }
 
 .texto {
@@ -105,7 +104,7 @@ header {
     justify-content: center; /* Centraliza verticalmente (caso precise) */
     text-align: left;
     gap: 50px;
-    padding-top: 50px;
+    padding-top: 20px;
     width: 100%;
 }
 .imagem_cerimonia_desenvolvimento-2 {
@@ -141,8 +140,8 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    gap: 20px;
-    width: 70%;
+    gap: 50px;
+    width: 85%;
     height: 437px; /* Garante que a altura e a largura sejam iguais, formando um quadrado */
     overflow: hidden; /* Oculta qualquer parte da imagem que ultrapasse o tamanho do container */
 }
