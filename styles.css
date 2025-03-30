@@ -1,0 +1,270 @@
+
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: #f8f8f8;
+    gap: 40%;
+}
+
+.logo a:hover {
+    color: gray;
+  }
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000; /* Cor do logo */
+    padding-left: 12%;
+}
+
+.hrefs {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000; /* Cor do logo */
+    display: flex;
+    gap: 30px;
+    justify-content: center; /* Centraliza os itens */
+}
+
+.hrefs a:hover{
+    color: gray;
+}
+
+.pre-introducao{
+    display: flex; /* Remove espaços extras */
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite quebrar em telas pequenas */
+    width: 100%; /* 100% da largura da tela */
+    background-color: bla;
+    height: auto; /* Mantém a proporção */
+   
+}
+
+.introducao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw; /* Espaço entre o texto e a imagem */
+    padding: 10vh 5vw;
+    width: 100%;
+    flex-wrap: wrap; /* Permite quebrar em telas pequenas */
+}
+
+.texto {
+    flex: 1;
+    max-width: 40%; /* Para evitar que o texto fique muito espalhado */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.imagem {
+    width: 40vw; /* Define um tamanho proporcional */
+    max-width: 500px; /* Limite para não crescer demais */
+    height: auto;
+}
+
+.imagem img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.cerimonias {
+    width: 100%;
+    clear: both;
+    text-align: center;
+    margin-top: 40px;
+}
+.imagens_cerimonia {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+.cerimonia {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza imagem e texto */
+    text-align: center;
+    max-width: 400px;
+}
+
+.cerimonia img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.cerimonia p {
+    margin-top: 10px; /* Espaço entre imagem e texto */
+    font-size: 24px;
+    color: #333;
+}
+.desenvolvimento-2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza verticalmente (caso precise) */
+    text-align: left;
+    gap: 50px;
+    padding-top: 20px;
+    width: 100%;
+}
+.imagem_cerimonia_desenvolvimento-2 {
+    width: 704px;
+    height: 704px; /* Garante que a altura e a largura sejam iguais, formando um quadrado */
+    overflow: hidden; /* Oculta qualquer parte da imagem que ultrapasse o tamanho do container */
+}
+
+.imagem_cerimonia_desenvolvimento-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Isso vai cortar e ajustar a imagem para preencher o container */
+}
+
+.desenvolvimento-2_texto {
+    max-width: 600px; 
+    display: flex;
+    flex-direction: column; /* Alinha os itens na coluna */
+    gap: 30px; /* Adiciona espaçamento entre os elementos filhos */
+    font-size: 24px;
+    color: #333;
+}
+.desenvolvimento-3{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.desenvolvimento-3_imagens{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 50px;
+    width: 85%;
+    height: 437px; /* Garante que a altura e a largura sejam iguais, formando um quadrado */
+    overflow: hidden; /* Oculta qualquer parte da imagem que ultrapasse o tamanho do container */
+}
+.desenvolvimento-3_imagens img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Isso vai cortar e ajustar a imagem para preencher o container */
+}
+.FAQ{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centraliza verticalmente (caso precise) */
+    text-align: left; 
+    gap: 100px;
+    margin-top: 30px;
+    margin-bottom: 55px;
+}
+
+.medico{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centraliza verticalmente (caso precise) */
+    margin-top: 5%;
+    gap: 8%;
+}
+.medico img{
+    width: 518px;
+    height: 486px;
+}
+
+.medico-texto{
+    width: 550px;
+    height: 486px;
+    text-align: left;
+    font-size: 24px;
+    color: #333;
+}
+
+.depoimentos{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center; /* Centraliza verticalmente (caso precise) */
+    width: 100%;
+    gap: 6%;
+    margin-top: 3%;
+
+}
+
+.depoimentos-separacao{
+    width: 600px;
+    gap: 20px;
+}
+
+.video-depoimento{
+    width: 550px;  /* Largura */
+    height: 450px; /* Altura */
+    object-fit: cover; /* Garante que o vídeo preencha o quadrado */
+
+}
+.footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .container-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  
+  .logo-footer{
+    width: 100px;
+    height: 100px;
+    margin-right: 25%;
+  }
+
+  .mapa-footer {
+    width: auto;
+    height: auto;
+    margin-left: 65%;
+  }
+  
+  .frase-footer {
+    font-size: 18px;
+    text-align: center;
+    max-width: 400px;
+    font-weight: bold;
+    margin-bottom: 6%;
+  }
+  
+  .links-footer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 10px 0;
+  }
+  
+  .links-footer a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .links-footer a:hover {
+    color: gray;
+  }
+  
+  .copyright-footer {
+    font-size: 12px;
+  }
+  
