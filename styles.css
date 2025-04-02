@@ -32,6 +32,41 @@ header {
     color: gray;
 }
 
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .hrefs {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: white;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .hrefs a {
+        display: block;
+        padding: 10px;
+    }
+
+    .hrefs.show {
+        display: flex;
+    }
+}
+
+
 .pre-introducao{
     display: flex; /* Remove espaços extras */
     align-items: center;
