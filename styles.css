@@ -94,7 +94,7 @@ header {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 5vh;
+    gap: 1vh;
 }
 
 .imagem {
@@ -107,6 +107,47 @@ header {
     width: 100%;
     height: auto;
     object-fit: cover;
+}
+
+.botao{
+    margin-top: 1.5rem; /* mt-6 */
+    padding-left: 7rem; /* px-28 */
+    padding-right: 7rem; /* px-28 */
+    padding-top: 1.25rem; /* py-5 */
+    padding-bottom: 1.25rem; /* py-5 */
+    font-size: 1.25rem; /* text-2xl */
+    background-color: #000000; /* bg-black */
+    color: #ffffff; /* text-white */
+    font-weight: 600; /* font-semibold */
+    border-radius: 0.5rem; /* rounded-lg */
+    transition: background-color 0.3s ease; /* transition */
+}
+
+.botao:hover {
+    background-color: #4b5563; /* hover:bg-gray-700 */
+}
+@media (max-width: 768px) {
+    .introducao {
+        flex-direction: column;
+        text-align: center;
+        padding: 5vh 3vw;
+    }
+
+    .texto {
+        max-width: 100%;
+    }
+
+    .imagem {
+        width: 80%;
+        max-width: 300px;
+    }
+    .botao{
+        padding-left: 2rem; /* px-8 */
+        padding-right: 2rem; /* px-8 */
+        padding-top: 1rem; /* py-4 */
+        padding-bottom: 1rem; /* py-4 */
+        font-size: 1rem; /* text-lg */
+    }
 }
 
 .cerimonias {
