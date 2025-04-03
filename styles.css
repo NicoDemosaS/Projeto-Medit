@@ -309,17 +309,84 @@ header {
 
 }
 
+@media (max-width: 768px) {  
+    .medico {
+        flex-direction: column;  
+        align-items: center;  
+        text-align: center;  
+        gap: 20px;  
+    }
+
+    .medico img {
+        width: 80%;  
+        height: auto;  
+    }
+
+    .medico-texto {
+        width: 90%;  
+        font-size: 20px;  
+        text-align: center;
+    }
+
+    .depoimentos {
+        flex-direction: column;  
+        gap: 20px;  
+    }
+}
+
+
 .depoimentos-separacao{
     width: 600px;
     gap: 20px;
 }
 
-.video-depoimento{
+.video-depoimento, .video-depoimento1{
     width: 550px;  /* Largura */
     height: 450px; /* Altura */
     object-fit: cover; /* Garante que o vídeo preencha o quadrado */
 
 }
+
+@media (max-width: 768px) {  
+    .depoimentos-separacao {
+        width: 90%;  
+        gap: 10px;  
+    }
+
+    .video-depoimento1{
+        display: none !important;
+    }
+
+    .video-depoimento {
+        width: 90%;  
+        height: auto;  
+    }
+    .depoimentos{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+.FAQ{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centraliza verticalmente (caso precise) */
+    text-align: left; 
+    gap: 100px;
+    margin-top: 30px;
+    margin-bottom: 55px;
+}
+
+@media (max-width: 768px) {  
+    .FAQ {
+        flex-direction: column; /* Empilha os itens no mobile */
+        gap: 30px; /* Reduz o espaço entre os itens */
+        text-align: center; /* Centraliza o texto */
+    }
+}
+
+
+
 .footer {
     background-color: #1a1a1a;
     color: white;
@@ -376,3 +443,32 @@ header {
     font-size: 12px;
   }
   
+  @media (max-width: 768px) {
+    .container-footer {
+        flex-direction: column; /* Empilha os itens no mobile */
+        align-items: center; /* Centraliza os itens */
+        text-align: center;
+        gap: 20px; /* Reduz espaço entre os itens */
+    }
+
+    .logo-footer {
+        margin-right: 0; /* Remove margem lateral */
+    }
+
+    .mapa-footer {
+        margin-left: 0; /* Remove margem lateral */
+        width: 100%; /* Ajusta o tamanho */
+        max-width: 300px; /* Limita o tamanho */
+    }
+
+    .frase-footer {
+        font-size: 16px; /* Reduz o tamanho da fonte */
+        max-width: 90%; /* Ajusta para telas menores */
+        margin-bottom: 20px;
+    }
+
+    .links-footer {
+        flex-direction: column; /* Empilha os links */
+        gap: 10px;
+    }
+}
