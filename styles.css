@@ -16,7 +16,7 @@ header {
     font-size: 20px;
     font-weight: bold;
     color: #000000; /* Cor do logo */
-    padding-left: 12%;
+    padding-top: 2%;
 }
 
 .hrefs {
@@ -387,6 +387,35 @@ header {
     font-size: 24px;
     color: #333;
 }
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
+}
+
+.faq-btn {
+    width: 100%;
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 20px;
+    transition: background 0.3s;
+}
+
+.faq-btn:hover {
+    background: #45a049;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px; /* Ajuste conforme necessário */
+    opacity: 1;
+}
+
 
 @media (max-width: 768px) {  
     .FAQ
