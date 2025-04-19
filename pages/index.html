@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Espaco Medit</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <script>
@@ -26,7 +26,7 @@
         </div>
     </header>
     <section class="pre-introducao">
-        <img src="assets/espacomedit.jpeg">
+        <img src="../assets/espacomedit.jpeg">
     </section>
     <section class="introducao">
         <div class="texto">
@@ -37,7 +37,7 @@
             </a>            
         </div>
         <div class="imagem">
-            <img src="assets/Espaco4.jpg" alt="Imagem do Medit">
+            <img src="../assets/Espaco4.jpg" alt="Imagem do Medit">
         </div>
     </section>
     
@@ -58,13 +58,13 @@
             </div>
         </div>    
         <div class="imagem_cerimonia_desenvolvimento-2">
-            <img src="assets/medite1.jpeg">
+            <img src="../assets/medite1.jpeg">
         </div>
    </section>
    <section class="desenvolvimento-3">
     <div class="desenvolvimento-3_imagens">
-        <img src="assets/Espaco2.jpg">
-        <img src="assets/Espaco3.jpg">
+        <img src="../assets/Espaco2.jpg">
+        <img src="../assets/Espaco3.jpg">
     </div>
    </section>
 
@@ -72,17 +72,17 @@
         <h1 class="text-[40px] font-bold">Cerimonias</h1>
         <div class="imagens_cerimonia">
             <div class="cerimonia">
-                <img src="assets/ayahyasca.jpg" alt="Cerimonia1">
+                <img src="../assets/ayahyasca.jpg" alt="Cerimonia1">
                 <h1 class="text-[30px] font-semibold">Ayahuasca</h1>
                 <p>Uma medicina ancestral utilizada para expansão da consciência e autoconhecimento, guiando a jornada espiritual com profundidade e conexão.</p>
             </div>
             <div class="cerimonia">
-                <img src="assets/Cacau.jpg" alt="Cerimonia2">
+                <img src="../assets/Cacau.jpg" alt="Cerimonia2">
                 <h1 class="text-[30px] font-semibold">Cacau</h1>
                 <p>O cacau sagrado abre o coração, promovendo bem-estar, amor e clareza mental em uma experiência suave e harmoniosa.</p>
             </div>
             <div class="cerimonia">    
-                <img src="assets/Psilocibina.jpg" alt="Cerimonia3">
+                <img src="../assets/Psilocibina.jpg" alt="Cerimonia3">
                 <h1 class="text-[30px] font-semibold">Cogumelo</h1>
                 <p>Facilitador de introspecção e cura, proporciona vivências profundas de conexão com a natureza, emoções e a própria essência.</p>
             </div>
@@ -95,12 +95,12 @@
             <h2 class="text-[35px] font-semibold">Doutor Bernardo</h2>
             <p class="text-[25px]">Dr. Bernardo é um cirurgião experiente e conhecedor da medicina tradicional, que, ao longo dos anos, integrou saberes ancestrais ao seu trabalho. Especialista na ayahuasca, tornou-se um consagrador respeitado, unindo ciência e espiritualidade para promover cura em diferentes níveis.</p>
         </div>
-        <img src="assets/medico.jpg">        
+        <img src="../assets/medico.jpg">        
     </section>
     <!-- Area de Depoimentos, construir CSS-->
     <section>
         <div class="depoimentos">
-            <video src="assets/videoteste.mp4" class="video-depoimento1"></video>
+            <video src="../assets/videoteste.mp4" class="video-depoimento1"></video>
             <div class="depoimentos-separacao">
                 <h1 class="md:text-[30px] font-semibold md:block hidden
                 ">A Transformação Através da Ayahuasca</h1>
@@ -114,7 +114,7 @@
                 <h1 class="text-[30px] font-semibold">A Cura Interior com a Ayahuasca</h1>
                 <p class="text-[25px]"> "Minha experiência com a ayahuasca foi algo que nunca imaginei vivenciar. Guiado pelo Dr. Bernardo, senti uma abertura profunda para o meu interior, como se todas as minhas dores e bloqueios se desintegrassem. Durante a sessão, consegui enfrentar traumas antigos que estavam me impedindo de seguir em frente. Hoje, me sinto mais leve, mais consciente e em paz. A ayahuasca me ajudou a encontrar equilíbrio, e sou eternamente grato por essa transformação tão profunda e libertadora."</p>
             </div>
-            <img src="assets/Espaco3.jpg" class="video-depoimento"></video>
+            <img src="../assets/Espaco3.jpg" class="video-depoimento"></video>
         </div>
     </section>
 
@@ -156,15 +156,13 @@
     <footer class="footer">
         <div class="container-footer">
           <!-- Imagem no canto esquerdo -->
-          <img src="assets/meditlogo.jpeg" alt="Logo Medit" class="logo-footer">
+          <img src="../assets/meditlogo.jpeg" alt="Logo Medit" class="logo-footer">
       
           <!-- Frase sobre autoconhecimento e ayahuasca -->
           <p class="frase-footer">"A ayahuasca é a chave para o autoconhecimento e a cura interior."</p>
       
           <!-- Mapa do Google -->
-          <a href="https://www.google.com/maps" target="_blank">
-            <img src="assets/icone-do-mapa.jpeg" alt="Google Maps" class="mapa-footer">
-          </a>
+          <div id="map" class="mapa-footer"></div>
         </div>
       
         <!-- Links de navegação -->
@@ -178,7 +176,21 @@
         <p class="copyright-footer">© 2025 Medit Project. Todos os direitos reservados.</p>
       </footer>
       
-
-      
+      <script>
+        function initMap() {
+          const location = { lat: -25.499139, lng: -54.544028 }; // Coordenadas para Rua Navegantes, 60, Foz do Iguaçu, Bairro Três Bandeiras
+          const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 15,
+            center: location,
+          });
+          const marker = new google.maps.Marker({
+            position: location,
+            map: map,
+          });
+        }
+      </script>
+      <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCih3GfhL3iYcWPso3L_awmoU3lnAl83JI&callback=initMap">
+      </script>
 </body>
 </html>

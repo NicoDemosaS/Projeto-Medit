@@ -1,5 +1,3 @@
-
-
 header {
     display: flex;
     justify-content: flex-start;
@@ -443,32 +441,70 @@ header {
   }
   
   .container-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; /* Espaço entre o texto e o mapa */
+      margin: 0 auto;
+      padding: 10px;
   }
   
   .logo-footer{
     width: 100px;
     height: 100px;
     margin-right: 25%;
+    margin-left: 10%;
   }
 
   .mapa-footer {
-    width: auto;
-    height: auto;
-    margin-left: 65%;
+      width: 800px;
+      height: 300px; /* Define a altura do mapa */
+      margin-left: 20%; /* Remove margem lateral */
+   
+  }
+
+  @media (max-width: 768px) {
+      .container-footer {
+          flex-direction: column; /* Empilha os itens no mobile */
+          align-items: center; /* Centraliza os itens */
+          text-align: center;
+          gap: 20px; /* Adiciona espaço entre os itens */
+      }
+
+      .logo-footer {
+          margin-right: 0; /* Remove margem lateral */
+          margin-left: 0; /* Remove margem lateral */
+          width: 80px; /* Ajusta o tamanho */
+          height: 80px; /* Ajusta o tamanho */
+      }
+
+      .mapa-footer {
+          margin-left: 0; /* Remove margem lateral */
+          margin-right: 0; /* Remove margem lateral */
+          width: 100%; /* Ajusta o tamanho */
+          max-width: 300px; /* Limita o tamanho */
+          height: auto; /* Mantém a proporção */
+      }
+
+      .frase-footer {
+          font-size: 16px; /* Reduz o tamanho da fonte */
+          max-width: 90%; /* Ajusta para telas menores */
+          margin-left: 0; /* Remove margem lateral */
+          margin-bottom: 20px;
+      }
+
+      .links-footer {
+          flex-direction: column; /* Empilha os links */
+          gap: 10px; /* Reduz espaço entre os links */
+      }
   }
   
   .frase-footer {
-    font-size: 18px;
-    text-align: center;
-    max-width: 400px;
-    font-weight: bold;
-    margin-bottom: 6%;
+      font-size: 18px;
+      text-align: center;
+      max-width: 400px;
+      font-weight: bold;
+      margin-left: 20px; /* Adiciona margem à esquerda para afastar do mapa */
+      margin-bottom: 6%;
   }
   
   .links-footer {

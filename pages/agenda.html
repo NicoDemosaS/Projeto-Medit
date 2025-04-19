@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espaco Medit</title>
+    <link rel="stylesheet" href="../css/styles_agenda.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<script>
+    function toggleMenu() {
+        document.querySelector(".hrefs").classList.toggle("show");
+    }
+</script>
+<body>
+    <header>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="logo">
+            <a href="#">Medit</a>
+        </div>
+        <div class="hrefs">
+            <a href="#">Galeria</a>
+            <a href="#">Agenda</a>
+            <a href="#">Quem Somos</a>
+            <a href="#">Depoimentos</a>
+        </div>
+    </header>
+    <h1 class=title-card-section>Cerimonias Disponiveis</h1>
+    <section class="card-section">
+        <div class="card">
+            <img src="../assets/MeditAgendamento.jpeg" alt="Cerimônia 1">
+            <div class="info">
+                <p class="title">Cerimônia 1</p>
+                <p class="details">Data: 20/04/2025</p>
+                <p class="details">Horário: 18:00</p>
+                <a href="checkout.html" class="button">Ir para Checkout</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../assets/Cacau.jpg" alt="Cerimônia 2">
+            <div class="info">
+                <p class="title">Cerimônia 2</p>
+                <p class="details">Data: 21/04/2025</p>
+                <p class="details">Horário: 19:00</p>
+                <a href="checkout.html" class="button">Ir para Checkout</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../assets/Psilocibina.jpg" alt="Cerimônia 3">
+            <div class="info">
+                <p class="title">Cerimônia 3</p>
+                <p class="details">Data: 22/04/2025</p>
+                <p class="details">Horário: 20:00</p>
+                <a href="checkout.html" class="button">Ir para Checkout</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../assets/ayahyasca.jpg" alt="Cerimônia 4">
+            <div class="info">
+                <p class="title">Cerimônia 4</p>
+                <p class="details">Data: 23/04/2025</p>
+                <p class="details">Horário: 21:00</p>
+                <a href="checkout.html" class="button">Ir para Checkout</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container-footer">
+          <!-- Imagem no canto esquerdo -->
+          <img src="../assets/meditlogo.jpeg" alt="Logo Medit" class="logo-footer">
+      
+          <!-- Frase sobre autoconhecimento e ayahuasca -->
+          <p class="frase-footer">"A ayahuasca é a chave para o autoconhecimento e a cura interior."</p>
+      
+          <!-- Mapa do Google -->
+          <div id="map" class="mapa-footer"></div>
+        </div>
+      
+        <!-- Links de navegação -->
+        <div class="links-footer">
+          <a href="#">Política de Privacidade</a>
+          <a href="#">Termos de Uso</a>
+          <a href="#">Contato</a>
+        </div>
+      
+        <!-- Direitos autorais -->
+        <p class="copyright-footer">© 2025 Medit Project. Todos os direitos reservados.</p>
+      </footer>
+      
+      <script>
+        function initMap() {
+          const location = { lat: -25.499139, lng: -54.544028 }; // Coordenadas para Rua Navegantes, 60, Foz do Iguaçu, Bairro Três Bandeiras
+          const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 15,
+            center: location,
+          });
+          const marker = new google.maps.Marker({
+            position: location,
+            map: map,
+          });
+        }
+      </script>
+      <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCih3GfhL3iYcWPso3L_awmoU3lnAl83JI&callback=initMap">
+      </script>
+</body>
+</html>

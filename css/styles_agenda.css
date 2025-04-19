@@ -1,0 +1,268 @@
+header {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: #f8f8f8;
+    gap: 40%;
+}
+
+.logo a:hover {
+    color: gray;
+  }
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000; /* Cor do logo */
+    padding-left: 12%;
+}
+
+.hrefs {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000; /* Cor do logo */
+    display: flex;
+    gap: 30px;
+    justify-content: center; /* Centraliza os itens */
+}
+
+.hrefs a:hover{
+    color: gray;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .logo{
+        padding-left: 0%;
+        padding-top: 2%;
+    }
+
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hrefs {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: white;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .hrefs a {
+        display: block;
+        padding: 10px;
+    }
+
+    .hrefs.show {
+        display: flex;
+    }
+
+    .imagem{
+        display: none;
+    }
+}
+
+.title-card-section{
+    font-weight: bold;
+    font-size: 40px;
+    padding-left: 15%;
+    padding-top: 2%;
+}
+
+/* Adicionando estilo para organizar os cards em linhas e limitar o tamanho */
+.card-section {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha */
+    gap: 20px; /* Espaço entre os cards */
+    justify-content: center; /* Centraliza os cards */
+    padding: 3%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo verticalmente */
+    align-items: center; /* Centraliza o conteúdo */
+    width: 400px; /* Largura fixa para os cards */
+    border: 1px solid #ccc; /* Borda para destacar os cards */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 10px; /* Espaçamento interno */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+    background-color: #fff; /* Fundo branco */
+}
+
+/* Ajustando o tamanho das imagens dos cards para que fiquem um pouco maiores */
+.card img {
+    width: 100%; /* Imagem ocupa toda a largura do card */
+    height: 500px; /* Aumenta a altura fixa para as imagens */
+    border-radius: 8px; /* Bordas arredondadas para a imagem */
+    object-fit: cover; /* Garante que a imagem se ajuste ao espaço */
+}
+
+.card .info {
+    margin-top: 10px; /* Espaço entre a imagem e o texto */
+    text-align: center; /* Centraliza o texto */
+}
+
+.card .info .title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px; /* Espaço entre o título e os outros textos */
+}
+
+.card .info .details {
+    font-size: 14px;
+    color: #666; /* Cor mais clara para os detalhes */
+}
+
+.footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .container-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; /* Espaço entre o texto e o mapa */
+      margin: 0 auto;
+      padding: 10px;
+  }
+  
+  .logo-footer{
+    width: 100px;
+    height: 100px;
+    margin-right: 25%;
+    margin-left: 10%;
+  }
+
+  .mapa-footer {
+      width: 800px;
+      height: 300px; /* Define a altura do mapa */
+      margin-left: 20%; /* Remove margem lateral */
+   
+  }
+
+  @media (max-width: 768px) {
+      .container-footer {
+          flex-direction: column; /* Empilha os itens no mobile */
+          align-items: center; /* Centraliza os itens */
+          text-align: center;
+          gap: 20px; /* Adiciona espaço entre os itens */
+      }
+
+      .logo-footer {
+          margin-right: 0; /* Remove margem lateral */
+          margin-left: 0; /* Remove margem lateral */
+          width: 80px; /* Ajusta o tamanho */
+          height: 80px; /* Ajusta o tamanho */
+      }
+
+      .mapa-footer {
+          margin-left: 0; /* Remove margem lateral */
+          margin-right: 0; /* Remove margem lateral */
+          width: 100%; /* Ajusta o tamanho */
+          max-width: 300px; /* Limita o tamanho */
+          height: auto; /* Mantém a proporção */
+      }
+
+      .frase-footer {
+          font-size: 16px; /* Reduz o tamanho da fonte */
+          max-width: 90%; /* Ajusta para telas menores */
+          margin-left: 0; /* Remove margem lateral */
+          margin-bottom: 20px;
+      }
+
+      .links-footer {
+          flex-direction: column; /* Empilha os links */
+          gap: 10px; /* Reduz espaço entre os links */
+      }
+  }
+  
+  .frase-footer {
+      font-size: 18px;
+      text-align: center;
+      max-width: 400px;
+      font-weight: bold;
+      margin-left: 20px; /* Adiciona margem à esquerda para afastar do mapa */
+      margin-bottom: 6%;
+  }
+  
+  .links-footer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 10px 0;
+  }
+  
+  .links-footer a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .links-footer a:hover {
+    color: gray;
+  }
+  
+  .copyright-footer {
+    font-size: 12px;
+  }
+  
+  @media (max-width: 768px) {
+    .container-footer {
+        flex-direction: column; /* Empilha os itens no mobile */
+        align-items: center; /* Centraliza os itens */
+        text-align: center;
+        gap: 20px; /* Reduz espaço entre os itens */
+    }
+
+    .logo-footer {
+        margin-right: 0; /* Remove margem lateral */
+    }
+
+    .mapa-footer {
+        margin-left: 0; /* Remove margem lateral */
+        width: 100%; /* Ajusta o tamanho */
+        max-width: 300px; /* Limita o tamanho */
+    }
+
+    .frase-footer {
+        font-size: 16px; /* Reduz o tamanho da fonte */
+        max-width: 90%; /* Ajusta para telas menores */
+        margin-bottom: 20px;
+    }
+
+    .links-footer {
+        flex-direction: column; /* Empilha os links */
+        gap: 10px;
+    }
+}
+
+/* Estilizando o botão para ter um fundo preto e um efeito hover */
+.button {
+    display: inline-block;
+    padding: 10px 20px; /* Espaçamento interno */
+    background-color: black; /* Fundo preto */
+    color: white; /* Texto branco */
+    text-decoration: none; /* Remove o sublinhado */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o texto */
+    font-weight: bold; /* Texto em negrito */
+    transition: background-color 0.3s ease; /* Transição suave para o hover */
+}
+
+.button:hover {
+    background-color: gray; /* Fundo cinza no hover */
+}
