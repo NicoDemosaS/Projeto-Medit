@@ -74,11 +74,19 @@ header {
     }
 }
 
-.title-card-section{
+.title-card-section {
     font-weight: bold;
     font-size: 40px;
     padding-left: 15%;
     padding-top: 2%;
+}
+
+@media (max-width: 768px) {
+    .title-card-section {
+        font-size: 24px; /* Reduz o tamanho da fonte no mobile */
+        padding-left: 5%; /* Ajusta o espaçamento no mobile */
+        text-align: center; /* Centraliza o texto no mobile */
+    }
 }
 
 /* Adicionando estilo para organizar os cards em linhas e limitar o tamanho */
@@ -113,6 +121,7 @@ header {
 .card .info {
     margin-top: 10px; /* Espaço entre a imagem e o texto */
     text-align: center; /* Centraliza o texto */
+
 }
 
 .card .info .title {
@@ -253,7 +262,8 @@ header {
 /* Estilizando o botão para ter um fundo preto e um efeito hover */
 .button {
     display: inline-block;
-    padding: 10px 20px; /* Espaçamento interno */
+    padding: 15px 50px; /* Aumenta o espaçamento interno superior */
+    margin-top: 15px; /* Adiciona um gap acima do botão */
     background-color: black; /* Fundo preto */
     color: white; /* Texto branco */
     text-decoration: none; /* Remove o sublinhado */

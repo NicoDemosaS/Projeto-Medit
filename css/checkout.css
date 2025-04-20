@@ -1,0 +1,54 @@
+/* Estilizando o layout do checkout */
+.checkout-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.checkout-info {
+    flex: 1;
+    max-width: 50%;
+    padding-left: 15%;
+    font-size: 108px; /* Aumenta o tamanho das informações */
+}
+
+.ceremony-title {
+    font-size: 58px; /* Aumenta o tamanho do título */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.ceremony-date, .ceremony-details, .ceremony-price {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.payment-button {
+    padding: 25px 250px; /* Aumenta o tamanho do botão */
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 28px; /* Aumenta o tamanho do texto do botão */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.payment-button:hover {
+    background-color: gray;
+}
+
+.checkout-image {
+    flex: 1;
+    max-width: 50%;
+}
+
+.checkout-image img {
+    width: 60%; /* Reduz ainda mais a largura da imagem */
+    height: auto; /* Mantém a proporção */
+    border-radius: 8px; /* Bordas arredondadas */
+    object-fit: cover; /* Ajusta a imagem ao espaço disponível */
+}

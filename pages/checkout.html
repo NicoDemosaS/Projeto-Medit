@@ -3,16 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Espaco Medit</title>
+    <link rel="stylesheet" href="../css/checkout.css">
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/agendamento.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
 </head>
-<script>
-    function toggleMenu() {
-        document.querySelector(".hrefs").classList.toggle("show");
-    }
-</script>
 <body>
     <header>
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
@@ -26,42 +21,18 @@
             <a href="#">Depoimentos</a>
         </div>
     </header>
-    <h1 class=title-card-section>Cerimonias Disponiveis</h1>
-    <section class="card-section">
-        <div class="card">
-            <img src="../assets/MeditAgendamento.jpeg" alt="Cerimônia 1">
-            <div class="info">
-                <p class="title">Cerimônia 1</p>
-                <p class="details">Data: 20/04/2025</p>
-                <p class="details">Horário: 18:00</p>
-                <a href="checkout.html" class="button">Ir para Checkout</a>
+
+    <section>
+        <div class="checkout-container">
+            <div class="checkout-info">
+                <h1 class="ceremony-title">Cerimônia Ayahuasca</h1>
+                <p class="ceremony-date">Data: 23/04/2025</p>
+                <p class="ceremony-details">Mais informações: Uma experiência única de autoconhecimento e cura interior.</p>
+                <p class="ceremony-price font-bold">Valor: R$ 250,00</p>
+                <button class="payment-button">Pagar Agora</button>
             </div>
-        </div>
-        <div class="card">
-            <img src="../assets/Cacau.jpg" alt="Cerimônia 2">
-            <div class="info">
-                <p class="title">Cerimônia 2</p>
-                <p class="details">Data: 21/04/2025</p>
-                <p class="details">Horário: 19:00</p>
-                <a href="checkout.html" class="button">Ir para Checkout</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="../assets/Psilocibina.jpg" alt="Cerimônia 3">
-            <div class="info">
-                <p class="title">Cerimônia 3</p>
-                <p class="details">Data: 22/04/2025</p>
-                <p class="details">Horário: 20:00</p>
-                <a href="checkout.html" class="button">Ir para Checkout</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="../assets/ayahyasca.jpg" alt="Cerimônia 4">
-            <div class="info">
-                <p class="title">Cerimônia 4</p>
-                <p class="details">Data: 23/04/2025</p>
-                <p class="details">Horário: 21:00</p>
-                <a href="checkout.html" class="button">Ir para Checkout</a>
+            <div class="checkout-image">
+                <img src="../assets/ayahyasca.jpg" alt="Imagem da Cerimônia Ayahuasca">
             </div>
         </div>
     </section>
