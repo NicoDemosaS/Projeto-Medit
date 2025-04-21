@@ -52,3 +52,40 @@
     border-radius: 8px; /* Bordas arredondadas */
     object-fit: cover; /* Ajusta a imagem ao espaço disponível */
 }
+
+/* Adicionando responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .checkout-container {
+        flex-direction: column-reverse; /* Altera a ordem para exibir a imagem primeiro */
+        align-items: center;
+        gap: 10px;
+    }
+
+    .checkout-info {
+        max-width: 90%;
+        padding-left: 0;
+        font-size: 24px; /* Reduz o tamanho das informações */
+        text-align: center;
+    }
+
+    .ceremony-title {
+        font-size: 32px; /* Reduz o tamanho do título */
+    }
+
+    .ceremony-date, .ceremony-details, .ceremony-price {
+        font-size: 18px; /* Reduz o tamanho do texto */
+    }
+
+    .payment-button {
+        padding: 15px 50px; /* Ajusta o tamanho do botão */
+        font-size: 18px; /* Reduz o tamanho do texto do botão */
+    }
+
+    .checkout-image {
+        max-width: 90%;
+    }
+
+    .checkout-image img {
+        width: 100%; /* Ajusta a largura da imagem para caber na tela */
+    }
+}

@@ -433,126 +433,122 @@ header {
 
 
 
+/* Estilos do footer movidos do index.html */
 .footer {
-    background-color: #1a1a1a;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-  }
-  
-  .container-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between; /* Espaço entre o texto e o mapa */
-      margin: 0 auto;
-      padding: 10px;
-  }
-  
-  .logo-footer{
-    width: 100px;
-    height: 100px;
-    margin-right: 25%;
-    margin-left: 10%;
-  }
-
-  .mapa-footer {
-      width: 800px;
-      height: 300px; /* Define a altura do mapa */
-      margin-left: 20%; /* Remove margem lateral */
-   
-  }
-
-  @media (max-width: 768px) {
-      .container-footer {
-          flex-direction: column; /* Empilha os itens no mobile */
-          align-items: center; /* Centraliza os itens */
-          text-align: center;
-          gap: 20px; /* Adiciona espaço entre os itens */
-      }
-
-      .logo-footer {
-          margin-right: 0; /* Remove margem lateral */
-          margin-left: 0; /* Remove margem lateral */
-          width: 80px; /* Ajusta o tamanho */
-          height: 80px; /* Ajusta o tamanho */
-      }
-
-      .mapa-footer {
-          margin-left: 0; /* Remove margem lateral */
-          margin-right: 0; /* Remove margem lateral */
-          width: 100%; /* Ajusta o tamanho */
-          max-width: 300px; /* Limita o tamanho */
-          height: auto; /* Mantém a proporção */
-      }
-
-      .frase-footer {
-          font-size: 16px; /* Reduz o tamanho da fonte */
-          max-width: 90%; /* Ajusta para telas menores */
-          margin-left: 0; /* Remove margem lateral */
-          margin-bottom: 20px;
-      }
-
-      .links-footer {
-          flex-direction: column; /* Empilha os links */
-          gap: 10px; /* Reduz espaço entre os links */
-      }
-  }
-  
-  .frase-footer {
-      font-size: 18px;
-      text-align: center;
-      max-width: 400px;
-      font-weight: bold;
-      margin-left: 20px; /* Adiciona margem à esquerda para afastar do mapa */
-      margin-bottom: 6%;
-  }
-  
-  .links-footer {
+    background-color: #f8f8f8;
+    color: #333;
+    padding: 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
     gap: 20px;
-    margin: 10px 0;
-  }
-  
-  .links-footer a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .links-footer a:hover {
-    color: gray;
-  }
-  
-  .copyright-footer {
-    font-size: 12px;
-  }
-  
-  @media (max-width: 768px) {
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 500px;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.logo-footer {
+    width: 150px;
+    height: 150px;
+}
+
+.frase-footer {
+    font-size: 26px;
+    font-weight: bold;
+    max-width: 450px;
+    text-align: center;
+}
+
+.contact-info {
+    font-size: 24px;
+    color: #333;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icons img {
+    width: 34px;
+    height: 34px;
+}
+
+.mapa-footer {
+    width: 500px;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
     .container-footer {
-        flex-direction: column; /* Empilha os itens no mobile */
-        align-items: center; /* Centraliza os itens */
-        text-align: center;
-        gap: 20px; /* Reduz espaço entre os itens */
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
 
     .logo-footer {
-        margin-right: 0; /* Remove margem lateral */
-    }
-
-    .mapa-footer {
-        margin-left: 0; /* Remove margem lateral */
-        width: 100%; /* Ajusta o tamanho */
-        max-width: 300px; /* Limita o tamanho */
+        width: 100px;
+        height: 100px;
     }
 
     .frase-footer {
-        font-size: 16px; /* Reduz o tamanho da fonte */
-        max-width: 90%; /* Ajusta para telas menores */
-        margin-bottom: 20px;
+        font-size: 18px;
+        text-align: center;
     }
 
-    .links-footer {
-        flex-direction: column; /* Empilha os links */
-        gap: 10px;
+    .contact-info {
+        text-align: center;
+        font-size: 14px;
     }
+
+    .mapa-footer {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+.section-divider {
+    border: none;
+    border-top: 2px dashed #000000; /* Linha tracejada */
+    margin: 10px 0; /* Espaçamento vertical */
 }

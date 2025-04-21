@@ -29,7 +29,11 @@
                 <p class="ceremony-date">Data: 23/04/2025</p>
                 <p class="ceremony-details">Mais informações: Uma experiência única de autoconhecimento e cura interior.</p>
                 <p class="ceremony-price font-bold">Valor: R$ 250,00</p>
-                <button class="payment-button">Pagar Agora</button>
+                <!-- Adicionando o botão do Stripe -->
+                <stripe-buy-button
+                  buy-button-id="buy_btn_1RFqKSBM006UTCjmREpGGK6q"
+                  publishable-key="pk_test_51RFqC8BM006UTCjmhNZpUlxuitaVAstd1g4dRdbzPPX16nxLAteNcn8f0dGEB11niy1sobapu2l4n8e7XVu16slA00KB4GTYYw"
+                ></stripe-buy-button>
             </div>
             <div class="checkout-image">
                 <img src="../assets/ayahyasca.jpg" alt="Imagem da Cerimônia Ayahuasca">
@@ -39,42 +43,43 @@
 
     <footer class="footer">
         <div class="container-footer">
-          <!-- Imagem no canto esquerdo -->
-          <img src="../assets/meditlogo.jpeg" alt="Logo Medit" class="logo-footer">
-      
-          <!-- Frase sobre autoconhecimento e ayahuasca -->
-          <p class="frase-footer">"A ayahuasca é a chave para o autoconhecimento e a cura interior."</p>
-      
-          <!-- Mapa do Google -->
-          <div id="map" class="mapa-footer"></div>
+            <hr class="section-divider">
+            <div class="footer-top">
+                <img src="../assets/meditlogo.jpeg" alt="Logo Medit" class="logo-footer">
+                <p class="frase-footer">"A meditação é a chave que abre as portas do autoconhecimento e da transformação interior."</p>
+            </div>
+            <hr class="section-divider">
+
+            <div class="footer-bottom">
+                <div class="contact-info">
+                    <p>Medit</p>
+                    <p>Email: contato.medit@gmail.com</p>
+                    <p>Contato: (45) 9 9923 2707</p>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="../assets/facebook-icon.jpeg" alt="Facebook"></a>
+                        <a href="#" target="_blank"><img src="../assets/instagram-icon.jpeg" alt="Instagram"></a>
+                    </div>
+                </div>
+                <div id="map" class="mapa-footer"></div>
+            </div>
         </div>
-      
-        <!-- Links de navegação -->
-        <div class="links-footer">
-          <a href="#">Política de Privacidade</a>
-          <a href="#">Termos de Uso</a>
-          <a href="#">Contato</a>
-        </div>
-      
-        <!-- Direitos autorais -->
-        <p class="copyright-footer">© 2025 Medit Project. Todos os direitos reservados.</p>
-      </footer>
-      
-      <script>
+    </footer>
+
+    <script>
         function initMap() {
-          const location = { lat: -25.499139, lng: -54.544028 }; // Coordenadas para Rua Navegantes, 60, Foz do Iguaçu, Bairro Três Bandeiras
-          const map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 15,
-            center: location,
-          });
-          const marker = new google.maps.Marker({
-            position: location,
-            map: map,
-          });
+            const location = { lat: -25.499139, lng: -54.544028 };
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 15,
+                center: location,
+            });
+            const marker = new google.maps.Marker({
+                position: location,
+                map: map,
+            });
         }
-      </script>
-      <script async defer
+    </script>
+    <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCih3GfhL3iYcWPso3L_awmoU3lnAl83JI&callback=initMap">
-      </script>
+    </script>
 </body>
 </html>
