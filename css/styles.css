@@ -2,7 +2,8 @@ header {
     display: flex;
     justify-content: flex-start;
     padding: 20px;
-    background-color: #f8f8f8;
+    background-color: #000000;
+    
     gap: 40%;
 }
 
@@ -13,21 +14,21 @@ header {
 .logo {
     font-size: 20px;
     font-weight: bold;
-    color: #000000; /* Cor do logo */
+    color: #f8f8f8; /* Cor do logo */
     padding-left: 12%;
 }
 
 .hrefs {
     font-size: 20px;
     font-weight: bold;
-    color: #000000; /* Cor do logo */
+    color: #F5F5F5; /* Cor do logo */
     display: flex;
     gap: 30px;
     justify-content: center; /* Centraliza os itens */
 }
 
 .hrefs a:hover{
-    color: gray;
+    color: #C89E4F;
 }
 
 .menu-toggle {
@@ -74,16 +75,10 @@ header {
     }
 }
 
-
-.pre-introducao{
-    display: flex; /* Remove espaços extras */
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap; /* Permite quebrar em telas pequenas */
-    width: 100%; /* 100% da largura da tela */
-    background-color: bla;
-    height: auto; /* Mantém a proporção */
-   
+.pre-introducao img {
+    width: 100%;
+    height: auto; /* mantém proporção vertical */
+    display: block; /* remove espaços extras causados por inline elements */
 }
 
 .introducao {
@@ -435,8 +430,8 @@ header {
 
 /* Estilos do footer movidos do index.html */
 .footer {
-    background-color: #f8f8f8;
-    color: #333;
+    background-color: #091E05;
+    color: #f8f8f8;
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -482,7 +477,7 @@ header {
 
 .contact-info {
     font-size: 24px;
-    color: #333;
+    color: #f8f8f8;
 }
 
 .social-icons {
