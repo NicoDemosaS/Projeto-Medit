@@ -75,7 +75,8 @@ header {
     }
 }
 
-.pre-introducao img {
+
+.slider-content img {
     width: 100%;
     height: auto; /* mantém proporção vertical */
     display: block; /* remove espaços extras causados por inline elements */
