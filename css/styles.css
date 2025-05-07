@@ -76,11 +76,7 @@ header {
 }
 
 
-.slider-content img {
-    width: 100%;
-    height: auto; /* mantém proporção vertical */
-    display: block; /* remove espaços extras causados por inline elements */
-}
+
 
 .introducao {
     display: flex;
@@ -124,7 +120,7 @@ header {
     color: #ffffff; /* text-white */
     font-weight: 600; /* font-semibold */
     border-radius: 0.5rem; /* rounded-lg */
-    transition: background-color 0.3s ease; /* transition */
+    transition: background-color 0.3s ease-in-out; /* transition */
 }
 
 .botao:hover {
@@ -392,7 +388,7 @@ header {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
+    transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .faq-btn {
@@ -547,4 +543,26 @@ header {
     border: none;
     border-top: 2px dashed #000000; /* Linha tracejada */
     margin: 10px 0; /* Espaçamento vertical */
+}
+
+
+/* Estilos para o carrossel de imagens */
+.slider {
+    width: 100%;
+    height: 85vh; /* Altura responsiva baseada na altura da viewport */
+    overflow: hidden; /* Esconde as imagens fora da área visível */
+    position: relative;
+}
+
+.slider-content {
+    display: flex; /* Alinha as imagens horizontalmente */
+    transition: transform 1s ease-in-out; /* Animação suave de transição */
+    width: 100%; /* 4 imagens, cada uma ocupando 100% */
+}
+
+.slide {
+    width: 100%; /* Cada imagem ocupa 100% da largura do slider */
+    height: 100%; /* Preenche toda a altura do slider */
+    flex-shrink: 0; /* Garante que as imagens não encolham */
+    object-fit: cover; /* Ajusta a imagem para cobrir o container */
 }

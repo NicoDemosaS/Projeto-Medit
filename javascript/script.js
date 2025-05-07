@@ -1,16 +1,15 @@
-function slide1(){
-    document.getElementById('id').src="../assets/medite10.jpeg";
-    setTimeout(slide2, 2000);
+
+
+// Adicionando funcionalidade de carrossel automático com transição suave
+const slider = document.querySelector('.slider-content');
+const slides = document.querySelectorAll('.slide');
+let currentIndex = 0;
+
+function showNextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length; // Avança para o próximo slide, voltando ao início se necessário
+    const offset = -currentIndex * 100; // Calcula o deslocamento com base no índice atual
+    slider.style.transform = `translateX(${offset}%)`;
 }
 
-function slide2(){
-    document.getElementById('id').src="../assets/espacomedit.jpeg";
-    setTimeout(slide3, 2000);
-}
-
-function slide3(){
-    document.getElementById('id').src="../assets/medite2.jpeg";
-    setTimeout(slide1, 2000);
-}
-
-window.onload = slide1;
+// Define o intervalo para mudar os slides automaticamente
+setInterval(showNextSlide, 2000); // Troca de slide a cada 2 segundos
