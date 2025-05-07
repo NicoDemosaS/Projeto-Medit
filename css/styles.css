@@ -599,3 +599,24 @@ header {
 
   
 }
+
+.slide-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    pointer-events: none; /* Garante que o texto não interfira na interação com o slider */
+}
+
+.slide-text h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.slide-text h2 {
+    font-size: 2rem;
+    margin: 0;
+}
