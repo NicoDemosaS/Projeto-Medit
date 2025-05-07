@@ -1,8 +1,20 @@
+/* Definição de variáveis de cores no topo para facilitar a manutenção */
+:root {
+    --cor-principal: #000000; /* Cor principal do site */
+    --cor-secundaria: #f8f8f8; /* Cor secundária do site */
+    --cor-hover: #C89E4F; /* Cor de hover */
+    --cor-footer: #091E05; /* Cor do footer */
+    --cor-texto: #333; /* Cor do texto */
+    --cor-botao: #000000; /* Cor do botão */
+    --cor-botao-hover: #4b5563; /* Cor do botão ao passar o mouse */
+    --cor-divider: #000000; /* Cor da linha divisória */
+}
+
 header {
     display: flex;
     justify-content: flex-start;
     padding: 20px;
-    background-color: #000000;
+    background-color: var(--cor-principal);
     
     gap: 40%;
 }
@@ -14,21 +26,21 @@ header {
 .logo {
     font-size: 20px;
     font-weight: bold;
-    color: #f8f8f8; /* Cor do logo */
+    color: var(--cor-secundaria); /* Cor do logo */
     padding-left: 12%;
 }
 
 .hrefs {
     font-size: 20px;
     font-weight: bold;
-    color: #F5F5F5; /* Cor do logo */
+    color: var(--cor-secundaria); /* Cor do logo */
     display: flex;
     gap: 30px;
     justify-content: center; /* Centraliza os itens */
 }
 
 .hrefs a:hover{
-    color: #C89E4F;
+    color: var(--cor-hover);
 }
 
 .menu-toggle {
@@ -116,15 +128,15 @@ header {
     padding-top: 1.25rem; /* py-5 */
     padding-bottom: 1.25rem; /* py-5 */
     font-size: 1.25rem; /* text-2xl */
-    background-color: #000000; /* bg-black */
-    color: #ffffff; /* text-white */
+    background-color: var(--cor-botao); /* bg-black */
+    color: var(--cor-secundaria); /* text-white */
     font-weight: 600; /* font-semibold */
     border-radius: 0.5rem; /* rounded-lg */
     transition: background-color 0.3s ease-in-out; /* transition */
 }
 
 .botao:hover {
-    background-color: #4b5563; /* hover:bg-gray-700 */
+    background-color: var(--cor-botao-hover); /* hover:bg-gray-700 */
 }
 @media (max-width: 768px) {
     .introducao {
@@ -179,7 +191,7 @@ header {
     flex-direction: column; /* Alinha os itens na coluna */
     gap: 30px; /* Adiciona espaçamento entre os elementos filhos */
     font-size: 24px;
-    color: #333;
+    color: var(--cor-texto);
 }
 
 @media (max-width: 768px) { /* Para telas menores que 768px */
@@ -237,7 +249,7 @@ header {
 .cerimonia p {
     margin-top: 10px; /* Espaço entre imagem e texto */
     font-size: 24px;
-    color: #333;
+    color: var(--cor-texto);
 }
 
 @media (max-width: 600px) {
@@ -291,7 +303,7 @@ header {
     height: 486px;
     text-align: left;
     font-size: 24px;
-    color: #333;
+    color: var(--cor-texto);
 }
 
 .depoimentos{
@@ -381,7 +393,7 @@ header {
     flex-direction: column; /* Alinha os itens na coluna */
     gap: 30px; /* Adiciona espaçamento entre os elementos filhos */
     font-size: 24px;
-    color: #333;
+    color: var(--cor-texto);
 }
 
 .faq-answer {
@@ -427,8 +439,8 @@ header {
 
 /* Estilos do footer movidos do index.html */
 .footer {
-    background-color: #091E05;
-    color: #f8f8f8;
+    background-color: var(--cor-footer);
+    color: var(--cor-secundaria);
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -463,6 +475,7 @@ header {
 .logo-footer {
     width: 150px;
     height: 150px;
+    border-radius: 30px; /* Adiciona leve arredondamento nas bordas */
 }
 
 .frase-footer {
@@ -474,7 +487,7 @@ header {
 
 .contact-info {
     font-size: 24px;
-    color: #f8f8f8;
+    color: var(--cor-secundaria);
 }
 
 .social-icons {
@@ -541,7 +554,7 @@ header {
 
 .section-divider {
     border: none;
-    border-top: 2px dashed #000000; /* Linha tracejada */
+    border-top: 2px dashed var(--cor-divider); /* Linha tracejada */
     margin: 10px 0; /* Espaçamento vertical */
 }
 
@@ -549,10 +562,19 @@ header {
 /* Estilos para o carrossel de imagens */
 .slider {
     width: 100%;
-    height: 85vh; /* Altura responsiva baseada na altura da viewport */
+    height: 76vh; /* Altura responsiva baseada na altura da viewport */
     overflow: hidden; /* Esconde as imagens fora da área visível */
     position: relative;
 }
+@media (max-width: 768px) {
+    .slider {
+        width: 100%;
+        height: auto; /* Altura responsiva baseada na altura da viewport */
+        overflow: hidden; /* Esconde as imagens fora da área visível */
+        position: relative;
+    }
+}
+
 
 .slider-content {
     display: flex; /* Alinha as imagens horizontalmente */
@@ -565,4 +587,15 @@ header {
     height: 100%; /* Preenche toda a altura do slider */
     flex-shrink: 0; /* Garante que as imagens não encolham */
     object-fit: cover; /* Ajusta a imagem para cobrir o container */
+}
+
+@media (max-width: 768px) {
+    .slide {
+        height: 300px; /* Define uma altura fixa para imagens no mobile */
+        object-fit: cover; /* Mantém o preenchimento do container */
+        margin: 0, 0 ,0 ,0; /* Remove margens superiores */
+        padding: 0,0,0,0; /* Remove espaçamentos internos */
+    }
+
+  
 }
