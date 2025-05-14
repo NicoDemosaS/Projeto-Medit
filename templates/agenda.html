@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Espaco Medit</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/agendamento.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/agendamento.css') }}">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <script>
@@ -17,19 +17,19 @@
     <header>
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <div class="logo">
-            <a href="/pages/index.html">Medit</a>
+            <a href="/">Medit</a>
         </div>
         <div class="hrefs">
-            <a href="/pages/galeria.html">Galeria</a>
-            <a href="/pages/agenda.html">Agenda</a>
-            <a href="/pages/quemsomos.html">Quem Somos</a>
-            <a href="/pages/">Depoimentos</a>
+            <a href="/galeria">Galeria</a>
+            <a href="/agenda">Agenda</a>
+            <a href="/quemsomos">Quem Somos</a>
+            <a href="/depoimentos">Depoimentos</a>
         </div>
     </header>
     <h1 class=title-card-section>Cerimonias Disponiveis</h1>
     <section class="card-section">
         <div class="card">
-            <img src="../assets/MeditAgendamento.jpeg" alt="Cerimônia 1">
+            <img src="{{ url_for('static', filename='assets/MeditAgendamento.jpeg') }}" alt="Cerimônia 1">
             <div class="info">
                 <p class="title">Cerimônia 1</p>
                 <p class="details">Data: 20/04/2025</p>
@@ -38,7 +38,7 @@
             </div>
         </div>
         <div class="card">
-            <img src="../assets/Cacau.jpg" alt="Cerimônia 2">
+            <img src="{{ url_for('static', filename='assets/Cacau.jpg') }}" alt="Cerimônia 2">
             <div class="info">
                 <p class="title">Cerimônia 2</p>
                 <p class="details">Data: 21/04/2025</p>
@@ -47,7 +47,7 @@
             </div>
         </div>
         <div class="card">
-            <img src="../assets/Psilocibina.jpg" alt="Cerimônia 3">
+            <img src="{{ url_for('static', filename='assets/Psilocibina.jpg') }}" alt="Cerimônia 3">
             <div class="info">
                 <p class="title">Cerimônia 3</p>
                 <p class="details">Data: 22/04/2025</p>
@@ -56,7 +56,7 @@
             </div>
         </div>
         <div class="card">
-            <img src="../assets/ayahyasca.jpg" alt="Cerimônia 4">
+            <img src="{{ url_for('static', filename='assets/ayahyasca.jpg') }}" alt="Cerimônia 4">
             <div class="info">
                 <p class="title">Cerimônia 4</p>
                 <p class="details">Data: 23/04/2025</p>
@@ -70,7 +70,7 @@
         <div class="container-footer">
             <hr class="section-divider">
             <div class="footer-top">
-                <img src="../assets/meditlogo.jpeg" alt="Logo Medit" class="logo-footer">
+                <img src="{{ url_for('static', filename='assets/meditlogo.jpeg') }}" alt="Logo Medit" class="logo-footer">
                 <p class="frase-footer">"A meditação é a chave que abre as portas do autoconhecimento e da transformação interior."</p>
             </div>
             <hr class="section-divider">
@@ -81,8 +81,8 @@
                     <p>Email: contato.medit@gmail.com</p>
                     <p>Contato: (45) 9 9923 2707</p>
                     <div class="social-icons">
-                        <a href="#" target="_blank"><img src="../assets/facebook-icon.jpeg" alt="Facebook"></a>
-                        <a href="#" target="_blank"><img src="../assets/instagram-icon.jpeg" alt="Instagram"></a>
+                        <a href="#" target="_blank"><img src="{{ url_for('static', filename='assets/facebook-icon.jpeg') }}" alt="Facebook"></a>
+                        <a href="#" target="_blank"><img src="{{ url_for('static', filename='assets/instagram-icon.jpeg') }}" alt="Instagram"></a>
                     </div>
                 </div>
                 <div id="map" class="mapa-footer"></div>

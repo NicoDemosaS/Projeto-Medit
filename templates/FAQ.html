@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Espaco Medit</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="logo">
+            <a href="/">Medit</a>
+        </div>
+        <div class="hrefs">
+            <a href="/galeria">Galeria</a>
+            <a href="/agenda">Agenda</a>
+            <a href="/quemsomos">Quem Somos</a>
+            <a href="/depoimentos">Depoimentos</a>
+        </div>
+    </header>
+
+    <h1 class="text-[40px] font-bold flex items-center justify-center">FAQ</h1>
+    <section class="FAQ">
+        <div class="FAQ-texto">
+            <div>
+                <h1 class="text-[30px] font-semibold mt-16">O que é uma consagração de ayahuasca?</h1>  
+                <p>A consagração de ayahuasca é o processo em que a bebida sagrada, composta por duas plantas (Banisteriopsis caapi e Psychotria viridis), é preparada e oferecida aos participantes durante um ritual espiritual, com o objetivo de promover cura, autoconhecimento e expansão da consciência.</p>
+            </div>
+            <div>
+                <h1 class="text-[30px] font-semibold">Qual é a importância do ambiente durante uma consagração de ayahuasca?</h1>  
+                <p>O ambiente é fundamental para a experiência, pois deve ser seguro, tranquilo e acolhedor, favorecendo a introspecção e a conexão espiritual. A atmosfera, iluminação suave e sons relaxantes contribuem para uma experiência profunda e transformadora.</p>
+            </div>
+            <div>
+                <h1 class="text-[30px] font-semibold">Há necessidade de preparação para uma consagração de ayahuasca?</h1>  
+                <p>Sim, a preparação é importante. Geralmente, envolve dieta leve e restrições alimentares, além de um estado mental preparado para a experiência. Isso ajuda a minimizar efeitos adversos e favorece a conexão com os aspectos espirituais da cerimônia.</p>
+            </div>
+            <div>
+                <h1 class="text-[30px] font-semibold">Quais são os efeitos físicos e emocionais durante a consagração de ayahuasca?</h1>  
+                <p>Durante a consagração, os efeitos podem incluir náuseas, vômitos e visão de padrões ou imagens espirituais. Emocionalmente, os participantes podem vivenciar momentos de introspecção profunda, alívio de traumas e um sentimento de conexão com a natureza e o universo.</p>
+            </div>
+            <div>
+                <h1 class="text-[30px] font-semibold">A ayahuasca pode ser consumida em qualquer ambiente?</h1>  
+                <p>Não, a ayahuasca deve ser consumida em ambientes controlados e preparados para rituais sagrados, preferencialmente sob a orientação de facilitadores experientes. A segurança emocional e física dos participantes é essencial, e a bebida não deve ser consumida de forma recreativa ou sem o devido acompanhamento espiritual.</p>
+            </div>
+            <div>
+                <h1 class="text-[30px] font-semibold">Como o ambiente pode influenciar a experiência com a ayahuasca?</h1>  
+                <p>Um ambiente de respeito, silêncio e serenidade contribui para uma experiência mais intensa e positiva. A presença de guias ou facilitadores experientes e o uso de cânticos e instrumentos musicais também ajudam a criar uma atmosfera que favorece a cura e o equilíbrio emocional.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container-footer">
+            <hr class="section-divider">
+            <div class="footer-top">
+                <img src="{{ url_for('static', filename='assets/meditlogo.jpeg') }}" alt="Logo Medit" class="logo-footer">
+                <p class="frase-footer">"A meditação é a chave que abre as portas do autoconhecimento e da transformação interior."</p>
+            </div>
+            <hr class="section-divider">
+
+            <div class="footer-bottom">
+                <div class="contact-info">
+                    <p>Medit</p>
+                    <p>Email: contato.medit@gmail.com</p>
+                    <p>Contato: (45) 9 993 707</p>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="{{ url_for('static', filename='assets/facebook.png') }}" alt="Facebook"></a>
+                        <a href="#" target="_blank"><img src="{{ url_for('static', filename='assets/instagram.png') }}" alt="Instagram"></a>
+                    </div>
+                </div>
+                <div id="map" class="mapa-footer"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector(".hrefs").classList.toggle("show");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espaco Medit</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="logo">
+            <a href="/">Medit</a>
+        </div>
+        <div class="hrefs">
+            <a href="/galeria">Galeria</a>
+            <a href="/agenda">Agenda</a>
+            <a href="/quemsomos">Quem Somos</a>
+            <a href="/depoimentos">Depoimentos</a>
+        </div>
+    </header>
+
+    <section class="slider">
+        <div class="slider-content">
+            <img src="{{ url_for('static', filename='assets/espacomedit.jpeg') }}" class="slide" alt="Slide 1">
+            <img src="{{ url_for('static', filename='assets/medite9.jpeg') }}" class="slide" alt="Slide 2">
+            <img src="{{ url_for('static', filename='assets/medite10.jpeg') }}" class="slide" alt="Slide 3">
+            <img src="{{ url_for('static', filename='assets/medite11.jpeg') }}" class="slide" alt="Slide 4">
+        </div>
+    </section>
+    
+    <section class="introducao">
+        <div class="texto">
+            <h1 class="text-[5px] font-bold md:text-[40px] font-bold">Conecte-se com sua essencia</h1>
+            <p class="text-[0px] md:text-[30px]">Em um ambiente de tranquilidade e harmonia, nosso espaço é dedicado a proporcionar uma jornada de autoconhecimento e cura profunda. Cada cerimônia é conduzida por mestres experientes, que guiarão sua conexão com o sagrado e a sabedoria ancestral.</p>
+            <a href="{{ url_for('static', filename='agenda.html') }}" class="botao">
+                Agende sua experiência
+            </a>            
+        </div>
+        <div class="imagem">
+            <img src="{{ url_for('static', filename='assets/Espaco4.jpg') }}" alt="Imagem do Medit">
+        </div>
+    </section>
+    
+   <section class="desenvolvimento">
+        <div class="desenvolvimento-texto">
+            <h1 class="text-[40px] font-bold">Espaco Medit</h1>
+            <div>
+                <h1 class="text-[30px] font-semibold">Ambiente Natural</h1>  
+                <p>Nosso espaço está imerso na natureza, proporcionando um ambiente tranquilo e harmonioso para conexão e introspecção.</p>
+            </div>
+            <div>
+                <h1 class="text-[30px] font-semibold">Estrutura e Conforto</h1>  
+                <p>Oferecemos acomodações aconchegantes e um espaço seguro, planejado para garantir bem-estar antes, durante e após a cerimônia.</p>
+            </div>
+            <div>
+                <h1 class="text-[30px] font-semibold">Preparacao da Cerimonia</h1>  
+                <p>Cada ritual é conduzido com respeito e tradição, incluindo orientações e práticas para preparar corpo e mente para a experiência.</p>
+            </div>
+        </div>    
+        <div class="imagem-cerimonia-desenvolvimento">
+            <img src="{{ url_for('static', filename='assets/medite1.jpeg' ) }}">
+        </div>
+   </section>
+   <section class="desenvolvimento-3">
+    <div class="desenvolvimento-3_imagens">
+        <img src="{{ url_for('static', filename='assets/Espaco.jpg') }}">
+        <img src="{{ url_for('static', filename='assets/Espaco3.jpg') }}">
+    </div>
+   </section>
+
+   <section class="cerimonias">
+        <h1 class="text-[40px] font-bold">Cerimonias</h1>
+        <div class="imagens_cerimonia">
+            <div class="cerimonia">
+                <img src="{{ url_for('static', filename='assets/ayahyasca.jpg') }}" alt="Cerimonia1">
+                <h1 class="text-[30px] font-semibold">Ayahuasca</h1>
+                <p>Uma medicina ancestral utilizada para expansão da consciência e autoconhecimento, guiando a jornada espiritual com profundidade e conexão.</p>
+            </div>
+            <div class="cerimonia">
+                <img src="{{ url_for('static', filename='assets/Cacau.jpg') }}" alt="Cerimonia">
+                <h1 class="text-[30px] font-semibold">Cacau</h1>
+                <p>O cacau sagrado abre o coração, promovendo bem-estar, amor e clareza mental em uma experiência suave e harmoniosa.</p>
+            </div>
+            <div class="cerimonia">    
+                <img src="{{ url_for('static', filename='assets/Psilocibina.jpg') }}" alt="Cerimonia3">
+                <h1 class="text-[30px] font-semibold">Cogumelo</h1>
+                <p>Facilitador de introspecção e cura, proporciona vivências profundas de conexão com a natureza, emoções e a própria essência.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Area de Apresentacao do Medico, construir CSS-->
+    <section class="medico">
+        <div class="medico-texto">
+            <h1 class="text-[100px] font-bold">Medico</h1>
+            <h1 class="text-[35px] font-semibold">Doutor Bernardo</h1>
+            <p class="medico-texto">Dr. Bernardo é um cirurgião experiente e conhecedor da medicina tradicional, que, ao longo dos anos, integrou saberes ancestrais ao seu trabalho. Especialista na ayahuasca, tornou-se um consagrador respeitado, unindo ciência e espiritualidade para promover cura em diferentes níveis.</p>
+        </div>
+        <img src="{{ url_for('static', filename='assets/medico.jpg') }}" alt="Medico" class="medico-imagem">        
+    </section>
+    <!-- Area de Depoimentos, construir CSS-->
+    <section>
+        <div class="depoimentos">
+            <video src="{{ url_for('static', filename='assets/videoteste.mp4') }}" class="video-depoimento1"></video>
+            <div class="depoimentos-separacao">
+                <h1 class="md:text-[30px] font-semibold md:block hidden
+                ">A Transformação Através da Ayahuasca</h1>
+                <p class="md:text-[23px] md:block hidden
+                ">"Minha experiência com a ayahuasca foi profundamente transformadora. No começo, senti resistência, mas, guiado pelo Dr. Bernardo, encontrei um espaço seguro para me conectar comigo mesmo. Durante a consagração, vivenciei uma clareza indescritível, como se camadas de medos e dúvidas fossem dissolvidas. Senti uma paz imensa e uma conexão com algo maior. Desde então, minha visão sobre a vida mudou—aprendi a lidar melhor com minhas emoções e a viver com mais propósito. Gratidão por essa jornada de cura e autoconhecimento!"
+                </p>
+            </div> 
+        </div>
+        <div class="depoimentos">
+            <div class="depoimentos-separacao">
+                <h1 class="text-[30px] font-semibold">A Cura Interior com a Ayahuasca</h1>
+                <p class="text-[23px]"> "Minha experiência com a ayahuasca foi algo que nunca imaginei vivenciar. Guiado pelo Dr. Bernardo, senti uma abertura profunda para o meu interior, como se todas as minhas dores e bloqueios se desintegrassem. Durante a sessão, consegui enfrentar traumas antigos que estavam me impedindo de seguir em frente. Hoje, me sinto mais leve, mais consciente e em paz. A ayahuasca me ajudou a encontrar equilíbrio, e sou eternamente grato por essa transformação tão profunda e libertadora."</p>
+            </div>
+            <img src="{{ url_for('static', filename='assets/Espaco3.jpg') }}" class="video-depoimento"></video>
+        </div>
+    </section>
+
+    <section class="galeria">
+        <h1 class="text-[40px] font-bold">Galeria de Imagens</h1>
+        <p class="text-[20px]">Explore momentos e espaços capturados em nossa jornada.</p>
+        <div class="galeria-container">
+            <div onclick="openModal(this)">
+                <img src="{{ url_for('static', filename='assets/ayahyasca.jpg') }}" alt="Cerimônia Ayahuasca">
+            </div>
+            <div onclick="openModal(this)">
+                <img src="{{ url_for('static', filename='assets/Cacau.jpg') }}" alt="Cerimônia Cacau">
+            </div>
+            <div onclick="openModal(this)">
+                <img src="{{ url_for('static', filename='assets/Psilocibina.jpg') }}" alt="Cerimônia Cogumelo">
+            </div>
+            <div onclick="openModal(this)">
+                <img src="{{ url_for('static', filename='assets/Espaco.jpg') }}" alt="Espaço Medit">
+            </div>
+            <div onclick="openModal(this)">
+                <img src="{{ url_for('static', filename='assets/Espaco2.jpg') }}" alt="Espaço Medit 2">
+            </div>
+            <div onclick="openModal(this)">
+                <img src="{{ url_for('static', filename='assets/Espaco3.jpg') }}" alt="Espaço Medit 3">
+            </div>
+        </div>
+    </section>
+
+    <div id="modal" class="modal" onclick="closeModal(event)">
+        <img class="modal-content" id="modal-image">
+    </div>
+
+    <footer class="footer">
+        <div class="container-footer">
+            <!-- Logo e frase -->
+            <hr class="section-divider">
+            <div class="footer-top">
+                <img src="{{ url_for('static', filename='assets/meditlogo.jpeg') }}" alt="Logo Medit" class="logo-footer">
+                <p class="frase-footer">"A meditação é a chave que abre as portas do autoconhecimento e da transformação interior."</p>
+            </div>
+            <hr class="section-divider">
+
+            <!-- Contato e mapa -->
+            <div class="footer-bottom">
+                <div class="contact-info">
+                    <p>Medit</p>
+                    <p>Email: contato.medit@gmail.com</p>
+                    <p>Contato: (45) 9 993 707</p>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="{{ url_for('static', filename='assets/facebook.png') }}" alt="Facebook"></a>
+                        <a href="#" target="_blank"><img src="{{ url_for('static', filename='assets/instagram.png') }}" alt="Instagram"></a>
+                    </div>
+                </div>
+                <div id="map" class="mapa-footer"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCih3GfhL3iYcWPso3L_awmoU3lnAl83JI&callback=initMap">
+    </script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

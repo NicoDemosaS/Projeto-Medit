@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/checkout.css">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/checkout.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
@@ -12,13 +12,13 @@
     <header>
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <div class="logo">
-            <a href="/pages/index.html">Medit</a>
+            <a href="{{ url_for('static', filename='pages/index.html') }}">Medit</a>
         </div>
         <div class="hrefs">
-            <a href="/pages/galeria.html">Galeria</a>
-            <a href="/pages/agenda.html">Agenda</a>
-            <a href="/pages/quemsomos.html">Quem Somos</a>
-            <a href="/pages/">Depoimentos</a>
+            <a href="{{ url_for('static', filename='pages/galeria.html') }}">Galeria</a>
+            <a href="{{ url_for('static', filename='pages/agenda.html') }}">Agenda</a>
+            <a href="{{ url_for('static', filename='pages/quemsomos.html') }}">Quem Somos</a>
+            <a href="{{ url_for('static', filename='pages/') }}">Depoimentos</a>
         </div>
     </header>
 
@@ -36,7 +36,7 @@
                 ></stripe-buy-button>
             </div>
             <div class="checkout-image">
-                <img src="../assets/ayahyasca.jpg" alt="Imagem da Cerimônia Ayahuasca">
+                <img src="{{ url_for('static', filename='assets/ayahyasca.jpg') }}" alt="Imagem da Cerimônia Ayahuasca">
             </div>
         </div>
     </section>
@@ -45,7 +45,7 @@
         <div class="container-footer">
             <hr class="section-divider">
             <div class="footer-top">
-                <img src="../assets/meditlogo.jpeg" alt="Logo Medit" class="logo-footer">
+                <img src="{{ url_for('static', filename='assets/meditlogo.jpeg') }}" alt="Logo Medit" class="logo-footer">
                 <p class="frase-footer">"A meditação é a chave que abre as portas do autoconhecimento e da transformação interior."</p>
             </div>
             <hr class="section-divider">
@@ -56,8 +56,8 @@
                     <p>Email: contato.medit@gmail.com</p>
                     <p>Contato: (45) 9 9923 2707</p>
                     <div class="social-icons">
-                        <a href="#" target="_blank"><img src="../assets/facebook-icon.jpeg" alt="Facebook"></a>
-                        <a href="#" target="_blank"><img src="../assets/instagram-icon.jpeg" alt="Instagram"></a>
+                        <a href="#" target="_blank"><img src="{{ url_for('static', filename='assets/facebook-icon.jpeg') }}" alt="Facebook"></a>
+                        <a href="#" target="_blank"><img src="{{ url_for('static', filename='assets/instagram-icon.jpeg') }}" alt="Instagram"></a>
                     </div>
                 </div>
                 <div id="map" class="mapa-footer"></div>
