@@ -68,7 +68,17 @@
     gap: 2.5rem;
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
-    background: linear-gradient(to bottom, #bbf7d0 0%, #f0fdf4 50%, #d1fae5 100%);
+    background-color: #ffffff;
+}
+.desenvolvimento {
+    background: #fff;
+    /* Remove gradiente verde, se houver */
+}
+.desenvolvimento .absolute {
+    display: none;
+}
+.introducao.desenvolvimento {
+    background: #fff;
 }
 @media (min-width: 768px) {
     .introducao, .desenvolvimento {
@@ -77,12 +87,43 @@
         align-items: center;
     }
 }
+.introducao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    padding: 10vh 5vw;
+    width: 100%;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+@media (max-width: 900px) {
+    .introducao {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 4vh 4vw;
+    }
+    .introducao .texto, .introducao .imagem {
+        max-width: 100%;
+        padding: 0;
+    }
+}
 .introducao .texto, .desenvolvimento-texto {
     max-width: 40rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     flex: 1;
     z-index: 10;
+}
+.introducao .texto {
+    flex: 1;
+    max-width: 40%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1vh;
+    box-sizing: border-box;
+    padding: 0 2vw;
 }
 .introducao h1, .desenvolvimento h1 {
     font-size: 2.25rem;
@@ -132,6 +173,24 @@
     padding-right: 1.5rem;
     margin-top: 2rem;
 }
+.introducao .imagem {
+    width: 40vw;
+    max-width: 500px;
+    height: auto;
+    box-sizing: border-box;
+    padding: 0 2vw;
+}
+@media (max-width: 900px) {
+    .introducao .imagem {
+        width: 80vw;
+        max-width: 350px;
+        padding: 0;
+    }
+    .introducao .texto {
+        max-width: 100%;
+        padding: 0;
+    }
+}
 @media (min-width: 768px) {
     .imagem, .imagem-cerimonia-desenvolvimento {
         margin-top: 0;
@@ -162,7 +221,7 @@
     cursor: pointer;
 }
 .space-y-6 > div:hover {
-    background: #bbf7d0;
+    background: #ffffff;
     border-left: 4px solid #166534;
     box-shadow: 0 8px 32px #a7f3d0;
     transform: scale(1.05);
@@ -254,7 +313,7 @@
     align-items: flex-start;
 }
 .card-desenvolvimento:hover {
-    background: #bbf7d0;
+    background: #f5f5f5;
     border-left: 4px solid #166534;
     box-shadow: 0 8px 32px #a7f3d0;
     transform: scale(1.05);
@@ -332,7 +391,7 @@
     margin-bottom: 1.2rem;
 }
 .card-desenvolvimento {
-    background: rgba(255,255,255,0.8);
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 1rem;
     box-shadow: 0 2px 8px #a7f3d0;
     border-left: 4px solid #4ade80;
@@ -346,7 +405,7 @@
     margin-top: 0;
 }
 .card-desenvolvimento:hover {
-    background: #bbf7d0;
+    background: #f5f5f5;
     border-left: 4px solid #166534;
     box-shadow: 0 8px 32px #a7f3d0;
     transform: scale(1.05);
