@@ -31,45 +31,70 @@
         </div>
     </section>
     
-    <section class="introducao">
-        <div class="texto">
-            <h1 class="text-[5px] font-bold md:text-[40px] font-bold">Conecte-se com sua essencia</h1>
-            <p class="text-[0px] md:text-[30px]">Em um ambiente de tranquilidade e harmonia, nosso espaço é dedicado a proporcionar uma jornada de autoconhecimento e cura profunda. Cada cerimônia é conduzida por mestres experientes, que guiarão sua conexão com o sagrado e a sabedoria ancestral.</p>
+    <section class="introducao desenvolvimento">
+        <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-b from-transparent to-green-100 pointer-events-none z-20"></div>
+        <div class="texto animate-fade-in-up">
+            <h1>Conecte-se com sua essência</h1>
+            <p>Em um ambiente de tranquilidade e harmonia, nosso espaço é dedicado a proporcionar uma jornada de autoconhecimento e cura profunda. Cada cerimônia é conduzida por mestres experientes, que guiarão sua conexão com o sagrado e a sabedoria ancestral.</p>
             <a href="{{ url_for('static', filename='agenda.html') }}" class="botao">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2" />
+                </svg>
                 Agende sua experiência
             </a>            
         </div>
-        <div class="imagem">
+        <div class="imagem animate-fade-in-right">
             <img src="{{ url_for('static', filename='assets/Espaco4.jpg') }}" alt="Imagem do Medit">
         </div>
     </section>
+    <div id="modal-intro-img" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+        <img src="{{ url_for('static', filename='assets/Espaco4.jpg') }}" alt="Imagem do Medit" class="max-w-full max-h-full rounded-3xl shadow-2xl border-4 border-green-200">
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const introImg = document.getElementById('intro-img-interactive');
+      const modal = document.getElementById('modal-intro-img');
+      if (introImg && modal) {
+        introImg.addEventListener('click', function() {
+          modal.classList.add('active');
+          modal.classList.remove('hidden');
+        });
+        modal.addEventListener('click', function(e) {
+          if (e.target === modal) {
+            modal.classList.remove('active');
+            modal.classList.add('hidden');
+          }
+        });
+      }
+    });
+    </script>
     
    <section class="desenvolvimento">
-        <div class="desenvolvimento-texto">
-            <h1 class="text-[40px] font-bold">Espaco Medit</h1>
-            <div>
-                <h1 class="text-[30px] font-semibold">Ambiente Natural</h1>  
-                <p>Nosso espaço está imerso na natureza, proporcionando um ambiente tranquilo e harmonioso para conexão e introspecção.</p>
+        <div class="absolute top-0 left-0 w-full h-24 bg-gradient-to-t from-transparent to-green-100 pointer-events-none z-20"></div>
+        <div class="desenvolvimento-colunas">
+            <div class="desenvolvimento-coluna">
+                <img src="{{ url_for('static', filename='assets/medite1.jpeg' ) }}" alt="Ambiente Espaço Medit" class="img-desenvolvimento">
+                <div class="card-desenvolvimento">
+                    <h2>Ambiente Natural</h2>
+                    <p>Nosso espaço está imerso na natureza, proporcionando um ambiente tranquilo e harmonioso para conexão e introspecção.</p>
+                </div>
             </div>
-            <div>
-                <h1 class="text-[30px] font-semibold">Estrutura e Conforto</h1>  
-                <p>Oferecemos acomodações aconchegantes e um espaço seguro, planejado para garantir bem-estar antes, durante e após a cerimônia.</p>
+            <div class="desenvolvimento-coluna">
+                <img src="{{ url_for('static', filename='assets/Espaco.jpg') }}" alt="Ambiente Espaço Medit 2" class="img-desenvolvimento">
+                <div class="card-desenvolvimento">
+                    <h2>Estrutura e Conforto</h2>
+                    <p>Oferecemos acomodações aconchegantes e um espaço seguro, planejado para garantir bem-estar antes, durante e após a cerimônia.</p>
+                </div>
             </div>
-            <div>
-                <h1 class="text-[30px] font-semibold">Preparacao da Cerimonia</h1>  
-                <p>Cada ritual é conduzido com respeito e tradição, incluindo orientações e práticas para preparar corpo e mente para a experiência.</p>
+            <div class="desenvolvimento-coluna">
+                <img src="{{ url_for('static', filename='assets/Espaco3.jpg') }}" alt="Ambiente Espaço Medit 3" class="img-desenvolvimento">
+                <div class="card-desenvolvimento">
+                    <h2>Preparação da Cerimônia</h2>
+                    <p>Cada ritual é conduzido com respeito e tradição, incluindo orientações e práticas para preparar corpo e mente para a experiência.</p>
+                </div>
             </div>
-        </div>    
-        <div class="imagem-cerimonia-desenvolvimento">
-            <img src="{{ url_for('static', filename='assets/medite1.jpeg' ) }}">
         </div>
-   </section>
-   <section class="desenvolvimento-3">
-    <div class="desenvolvimento-3_imagens">
-        <img src="{{ url_for('static', filename='assets/Espaco.jpg') }}">
-        <img src="{{ url_for('static', filename='assets/Espaco3.jpg') }}">
-    </div>
-   </section>
+    </section>
 
    <section class="cerimonias">
         <h1 class="text-[40px] font-bold">Cerimonias</h1>
