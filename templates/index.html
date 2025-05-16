@@ -97,26 +97,36 @@
         </div>
     </section>
 
-   <section class="cerimonias">
-        <h1 class="text-[40px] font-bold">Cerimonias</h1>
-        <div class="imagens_cerimonia">
-            <div class="cerimonia">
-                <img src="{{ url_for('static', filename='assets/ayahyasca.jpg') }}" alt="Cerimonia1">
-                <h1 class="text-[30px] font-semibold">Ayahuasca</h1>
+    <section class="cerimonias">
+        <h1 class="text-[40px] font-bold">Cerimônias</h1>
+        <div class="cerimonias-colunas">
+            <div class="cerimonia-coluna card-desenvolvimento">
+                <div class="cerimonia-img-wrapper">
+                    <img src="{{ url_for('static', filename='assets/ayahyasca.jpg') }}" alt="Cerimonia Ayahuasca" class="img-desenvolvimento cerimonia-img-zoom">
+                </div>
+                <h2>Ayahuasca</h2>
                 <p>Uma medicina ancestral utilizada para expansão da consciência e autoconhecimento, guiando a jornada espiritual com profundidade e conexão.</p>
+                <a href="/agenda" class="cerimonia-botao">Agendar</a>
             </div>
-            <div class="cerimonia">
-                <img src="{{ url_for('static', filename='assets/Cacau.jpg') }}" alt="Cerimonia">
-                <h1 class="text-[30px] font-semibold">Cacau</h1>
+            <div class="cerimonia-coluna card-desenvolvimento">
+                <div class="cerimonia-img-wrapper">
+                    <img src="{{ url_for('static', filename='assets/Cacau.jpg') }}" alt="Cerimonia Cacau" class="img-desenvolvimento cerimonia-img-zoom">
+                </div>
+                <h2>Cacau</h2>
                 <p>O cacau sagrado abre o coração, promovendo bem-estar, amor e clareza mental em uma experiência suave e harmoniosa.</p>
+                <a href="/agenda" class="cerimonia-botao">Agendar</a>
             </div>
-            <div class="cerimonia">    
-                <img src="{{ url_for('static', filename='assets/Psilocibina.jpg') }}" alt="Cerimonia3">
-                <h1 class="text-[30px] font-semibold">Cogumelo</h1>
+            <div class="cerimonia-coluna card-desenvolvimento">
+                <div class="cerimonia-img-wrapper">
+                    <img src="{{ url_for('static', filename='assets/Psilocibina.jpg') }}" alt="Cerimonia Cogumelo" class="img-desenvolvimento cerimonia-img-zoom">
+                </div>
+                <h2>Cogumelo</h2>
                 <p>Facilitador de introspecção e cura, proporciona vivências profundas de conexão com a natureza, emoções e a própria essência.</p>
+                <a href="/agenda" class="cerimonia-botao">Agendar</a>
             </div>
         </div>
     </section>
+
     <!-- Area de Apresentacao do Medico, construir CSS-->
     <section class="medico">
         <div class="medico-texto">
