@@ -25,6 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let index = 0;
     const slideText = document.querySelector('.slide-text');
 
+    
+
     function showTextWithAnimation() {
         // Remove classes to reset
         slideText.classList.remove('invisible', 'slide-down');
