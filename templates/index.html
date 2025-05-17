@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Espaco Medit</title>
+    <link rel="icon" type="image/jpeg" href="{{ url_for('static', filename='assets/meditlogo.jpeg') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -46,19 +47,28 @@
     </section>
     
    <section class="desenvolvimento">
-        <div class="desenvolvimento-texto">
-            <h1 class="text-[40px] font-bold">Espaco Medit</h1>
-            <div>
-                <h1 class="text-[30px] font-semibold">Ambiente Natural</h1>  
-                <p>Nosso espaço está imerso na natureza, proporcionando um ambiente tranquilo e harmonioso para conexão e introspecção.</p>
+        <div class="absolute top-0 left-0 w-full h-24 bg-gradient-to-t from-transparent to-green-100 pointer-events-none z-20"></div>
+        <div class="desenvolvimento-colunas">
+            <div class="desenvolvimento-coluna desenvolvimento-card-natural">
+                <img src="{{ url_for('static', filename='assets/medite1.jpeg' ) }}" alt="Ambiente Espaço Medit" class="img-desenvolvimento">
+                <div class="card-desenvolvimento">
+                    <h2>Ambiente Natural</h2>
+                    <p>Nosso espaço está imerso na natureza, proporcionando um ambiente tranquilo e harmonioso para conexão e introspecção.</p>
+                </div>
             </div>
-            <div>
-                <h1 class="text-[30px] font-semibold">Estrutura e Conforto</h1>  
-                <p>Oferecemos acomodações aconchegantes e um espaço seguro, planejado para garantir bem-estar antes, durante e após a cerimônia.</p>
+            <div class="desenvolvimento-coluna desenvolvimento-card-conforto">
+                <img src="{{ url_for('static', filename='assets/Espaco.jpg') }}" alt="Ambiente Espaço Medit 2" class="img-desenvolvimento">
+                <div class="card-desenvolvimento">
+                    <h2>Estrutura e Conforto</h2>
+                    <p>Oferecemos acomodações aconchegantes e um espaço seguro, planejado para garantir bem-estar antes, durante e após a cerimônia.</p>
+                </div>
             </div>
-            <div>
-                <h1 class="text-[30px] font-semibold">Preparacao da Cerimonia</h1>  
-                <p>Cada ritual é conduzido com respeito e tradição, incluindo orientações e práticas para preparar corpo e mente para a experiência.</p>
+            <div class="desenvolvimento-coluna desenvolvimento-card-preparacao">
+                <img src="{{ url_for('static', filename='assets/Espaco3.jpg') }}" alt="Ambiente Espaço Medit 3" class="img-desenvolvimento">
+                <div class="card-desenvolvimento">
+                    <h2>Preparação da Cerimônia</h2>
+                    <p>Cada ritual é conduzido com respeito e tradição, incluindo orientações e práticas para preparar corpo e mente para a experiência.</p>
+                </div>
             </div>
         </div>    
         <div class="imagem-cerimonia-desenvolvimento">
@@ -72,26 +82,36 @@
     </div>
    </section>
 
-   <section class="cerimonias">
-        <h1 class="text-[40px] font-bold">Cerimonias</h1>
-        <div class="imagens_cerimonia">
-            <div class="cerimonia">
-                <img src="{{ url_for('static', filename='assets/ayahyasca.jpg') }}" alt="Cerimonia1">
-                <h1 class="text-[30px] font-semibold">Ayahuasca</h1>
+    <section class="cerimonias">
+        <h1 class="text-[40px] font-bold">Cerimônias</h1>
+        <div class="cerimonias-colunas">
+            <div class="cerimonia-coluna card-desenvolvimento cerimonia-card-ayahuasca">
+                <div class="cerimonia-img-wrapper">
+                    <img src="{{ url_for('static', filename='assets/ayahyasca.jpg') }}" alt="Cerimonia Ayahuasca" class="img-desenvolvimento cerimonia-img-zoom">
+                </div>
+                <h2>Ayahuasca</h2>
                 <p>Uma medicina ancestral utilizada para expansão da consciência e autoconhecimento, guiando a jornada espiritual com profundidade e conexão.</p>
+                <a href="/agenda" class="cerimonia-botao">Agendar</a>
             </div>
-            <div class="cerimonia">
-                <img src="{{ url_for('static', filename='assets/Cacau.jpg') }}" alt="Cerimonia">
-                <h1 class="text-[30px] font-semibold">Cacau</h1>
+            <div class="cerimonia-coluna card-desenvolvimento cerimonia-card-cacau">
+                <div class="cerimonia-img-wrapper">
+                    <img src="{{ url_for('static', filename='assets/Cacau.jpg') }}" alt="Cerimonia Cacau" class="img-desenvolvimento cerimonia-img-zoom">
+                </div>
+                <h2>Cacau</h2>
                 <p>O cacau sagrado abre o coração, promovendo bem-estar, amor e clareza mental em uma experiência suave e harmoniosa.</p>
+                <a href="/agenda" class="cerimonia-botao">Agendar</a>
             </div>
-            <div class="cerimonia">    
-                <img src="{{ url_for('static', filename='assets/Psilocibina.jpg') }}" alt="Cerimonia3">
-                <h1 class="text-[30px] font-semibold">Cogumelo</h1>
+            <div class="cerimonia-coluna card-desenvolvimento cerimonia-card-cogumelo">
+                <div class="cerimonia-img-wrapper">
+                    <img src="{{ url_for('static', filename='assets/Psilocibina.jpg') }}" alt="Cerimonia Cogumelo" class="img-desenvolvimento cerimonia-img-zoom">
+                </div>
+                <h2>Cogumelo</h2>
                 <p>Facilitador de introspecção e cura, proporciona vivências profundas de conexão com a natureza, emoções e a própria essência.</p>
+                <a href="/agenda" class="cerimonia-botao">Agendar</a>
             </div>
         </div>
     </section>
+
     <!-- Area de Apresentacao do Medico, construir CSS-->
     <section class="medico">
         <div class="medico-texto">
