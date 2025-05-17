@@ -52,11 +52,12 @@
 
 @media (max-width: 768px) {
     .galeria-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .galeria-container img {
-        height: auto;
+        height: 150px; /* Ajusta a altura para telas menores */
+        width: 100%;
     }
 }
 
@@ -106,6 +107,10 @@
     .introducao .texto, .introducao .imagem {
         max-width: 100%;
         padding: 0;
+    }
+
+    .imagem{
+        display: none !important;
     }
 }
 .introducao .texto, .desenvolvimento-texto {
@@ -194,6 +199,15 @@
 @media (min-width: 768px) {
     .imagem, .imagem-cerimonia-desenvolvimento {
         margin-top: 0;
+
+    }
+    .imagem-cerimonia-desenvolvimento{
+        display: none !important;
+    }
+}
+@media (max-width: 768px) {
+    .imagem-cerimonia-desenvolvimento {
+        display: none;
     }
 }
 .imagem img, .imagem-cerimonia-desenvolvimento img {
