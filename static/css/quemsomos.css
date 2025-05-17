@@ -1,0 +1,28 @@
+/* Exemplo de sobreposição de texto sobre imagem */
+.imagem-com-texto {
+    position: relative; /* Container relativo */
+    display: inline-block; /* Ou block, conforme o layout */
+    width: 400px; /* Ajuste conforme necessário */
+    height: 300px;
+    overflow: hidden;
+}
+
+.imagem-com-texto img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.texto-sobreposto {
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste fino para centralização */
+    color: white;
+    font-size: 2rem;
+    background: rgba(0,0,0,0.5); /* Fundo semitransparente opcional */
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+}

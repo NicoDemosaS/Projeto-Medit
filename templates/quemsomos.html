@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/quemsomos.css') }}">
 </head>
 <body>
+
+<div class="imagem-com-texto">
+    <img src="{{ url_for('static', filename='assets/Espaco4.jpg') }}" alt="Imagem do Medit">
+    <div class="texto-sobreposto">Projeto Medit! Projeto Medit</div>
+</div>
     <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 </body>
 </html>

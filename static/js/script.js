@@ -15,35 +15,40 @@ window.addEventListener('DOMContentLoaded', () => {
     setInterval(showNextSlide, 5000); // Change slide every 5 seconds
 });
 
-// Add scroll-based animation logic
-window.addEventListener('DOMContentLoaded', () => {
-    const scrollElements = document.querySelectorAll('.scroll-animate');
+document.addEventListener('DOMContentLoaded', function() {
+    const textos = [
+        "TEXTINHO BACANA PARA LUAN VER COMO ESTA OCORRENDO",
+        "Espaço Medit 2",
+        "Espaço Medit 3",
+        "Espaço Medit 4"
+    ];
+    let index = 0;
+    const slideText = document.querySelector('.slide-text');
 
-    const elementInView = (el, offset = 100) => {
-        const elementTop = el.getBoundingClientRect().top;
-        return (
-            elementTop <= (window.innerHeight || document.documentElement.clientHeight) - offset
-        );
-    };
+    function showTextWithAnimation() {
+        // Remove classes to reset
+        slideText.classList.remove('invisible', 'slide-down');
+        // Forçar reflow para reiniciar animação
+        void slideText.offsetWidth;
+        // Adiciona animação de entrada
+        slideText.classList.add('slide-down');
+        slideText.textContent = textos[index];
+        // Remove animação de entrada após 1s
+        setTimeout(() => {
+            slideText.classList.remove('slide-down');
+        }, 1000);
+    }
 
-    const displayScrollElement = (element) => {
-        element.classList.add('visible');
-    };
+    function trocarTexto() {
+        // Torna invisível no último segundo
+        slideText.classList.add('invisible');
+        setTimeout(() => {
+            index = (index + 1) % textos.length;
+            showTextWithAnimation();
+        }, 1000); // 1s antes de trocar
+    }
 
-    const hideScrollElement = (element) => {
-        element.classList.remove('visible');
-    };
-
-    const handleScrollAnimation = () => {
-        scrollElements.forEach((el) => {
-            if (elementInView(el, 150)) {
-                displayScrollElement(el);
-            } else {
-                hideScrollElement(el);
-            }
-        });
-    };
-
-    window.addEventListener('scroll', handleScrollAnimation);
-    handleScrollAnimation(); // Trigger animation on page load
+    // Inicializa
+    showTextWithAnimation();
+    setInterval(trocarTexto, 5000); // Troca a cada 5 segundos
 });
