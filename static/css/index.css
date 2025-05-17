@@ -74,6 +74,7 @@
 .desenvolvimento {
     background: #fff;
     /* Remove gradiente verde, se houver */
+    padding-bottom: 2rem; /* Reduzido de 3.5rem para 2rem */
 }
 .desenvolvimento .absolute {
     display: none;
@@ -102,7 +103,8 @@
     .introducao {
         flex-direction: column;
         gap: 2rem;
-        padding: 4vh 4vw;
+        padding: 5vh 5vw;
+        padding-bottom: 0%;
     }
     .introducao .texto, .introducao .imagem {
         max-width: 100%;
@@ -375,6 +377,21 @@
     }
 }
 
+@media (max-width: 768px) {
+    .desenvolvimento-card-natural,
+    .desenvolvimento-card-conforto,
+    .desenvolvimento-card-preparacao {
+        min-height: auto; /* Ajusta a altura para conteúdo dinâmico */
+        padding: 20px; /* Adiciona espaçamento interno */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .desenvolvimento-colunas {
+        flex-direction: column; /* Empilha os cards verticalmente */
+        gap: 20px; /* Adiciona espaçamento entre os cards */
+    }
+}
+
 /* Alinhamento em colunas das imagens e cards */
 .desenvolvimento-colunas {
     display: flex;
@@ -463,6 +480,10 @@
     }
 }
 
+.desenvolvimento > *:last-child {
+    margin-bottom: 0; /* Remove margem inferior do último elemento */
+}
+
 .slide-text {
   opacity: 1;
   transition: opacity 1s;
@@ -494,7 +515,14 @@
 .cerimonias {
     width: 100%;
     background: #fff;
-    padding: 3rem 0 2rem 0;
+    padding: 2rem 0 2rem 0; /* Reduzido de 3rem para 2rem */
+}
+
+@media screen and (max-width: 768px) {
+    .cerimonias {
+        padding: 0rem 0; /* Reduzido para telas menores */
+    }
+    
 }
 
 /* Alinhamento em colunas das imagens e cards de cerimônia */
@@ -618,6 +646,80 @@
         max-width: 100%; /* Garante que os cards ocupem toda a largura disponível */
         min-height: auto; /* Remove a altura mínima fixa para melhor adaptação */
     }
+
+    .cerimonia-coluna {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+        flex: 1 1 0;
+        min-width: 0;
+        max-width: 400px;
+        background: #f9f9f9; /* Alterado para um fundo mais claro */
+        border-radius: 1rem;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+        padding: 1.5rem;
+        transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+        cursor: pointer;
+        border: 1px solid #e5e5e5; /* Adicionado borda sutil */
+    }
+
+    .cerimonia-coluna:hover {
+        background: #ffffff; /* Fundo branco ao passar o mouse */
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); /* Sombra mais intensa */
+        transform: scale(1.05); /* Leve aumento no tamanho */
+    }
+
+    .cerimonia-coluna h2 {
+        color: #14532d; /* Cor verde escura para o título */
+        font-size: 1.75rem; /* Tamanho maior para destaque */
+        font-weight: 700;
+        margin-bottom: 1rem;
+        transition: color 0.3s;
+    }
+
+    .cerimonia-coluna:hover h2 {
+        color: #166534; /* Cor mais vibrante ao passar o mouse */
+    }
+
+    .cerimonia-coluna p {
+        color: #444; /* Cor cinza para o texto */
+        font-size: 1.125rem;
+        line-height: 1.6; /* Melhor espaçamento entre linhas */
+        margin-bottom: 1.5rem;
+        transition: color 0.3s;
+    }
+
+    .cerimonia-coluna:hover p {
+        color: #222; /* Cor mais escura ao passar o mouse */
+    }
+
+    .cerimonia-img-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex: 1 0 auto;
+        margin-bottom: 1.5rem;
+    }
+
+    .cerimonia-img-zoom {
+        width: 100%;
+        height: auto;
+        max-height: 300px; /* Altura máxima para imagens */
+        object-fit: cover;
+        border-radius: 1rem;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .cerimonia-coluna:hover .cerimonia-img-zoom {
+        transform: scale(1.1); /* Zoom mais perceptível */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
+    }
+}
+
+.cerimonias > *:first-child {
+    margin-top: 0; /* Remove margem superior do primeiro elemento */
 }
 
 /* Animações */

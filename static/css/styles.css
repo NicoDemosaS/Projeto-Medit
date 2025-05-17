@@ -334,6 +334,14 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Isso vai cortar e ajustar a imagem para preencher o container */
+    border-radius: 15px;
+    box-shadow: 0 8px 32px #a7f3d0; /* Esfumado verde */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transição suave */
+}
+
+.desenvolvimento-3_imagens img:hover {
+    transform: translateY(-5px); /* Move a imagem levemente para cima */
+    box-shadow: 0 12px 40px #bbf7d0; /* Intensifica o esfumado verde no hover */
 }
 
 .medico{
@@ -706,6 +714,13 @@ header {
 
     font-weight: bold;
     font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .slide-text {
+        font-size: 1.5rem; /* Tamanho do texto reduzido para telas menores */
+    }
+    
 }
 
 

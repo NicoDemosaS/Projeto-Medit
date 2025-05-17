@@ -18,9 +18,9 @@ window.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', function() {
     const textos = [
         "Bem-vindo ao Espaço Medit",
-        "Espaço Medit 2",
-        "Espaço Medit 3",
-        "Espaço Medit 4"
+        "Estrutura e Conforto",
+        "Ambiente imerso na Natureza",
+        "Ambiente Aconchegante",
     ];
     let index = 0;
     const slideText = document.querySelector('.slide-text');
