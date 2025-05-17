@@ -68,7 +68,17 @@
     gap: 2.5rem;
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
-    background: linear-gradient(to bottom, #bbf7d0 0%, #f0fdf4 50%, #d1fae5 100%);
+    background-color: #ffffff;
+}
+.desenvolvimento {
+    background: #fff;
+    /* Remove gradiente verde, se houver */
+}
+.desenvolvimento .absolute {
+    display: none;
+}
+.introducao.desenvolvimento {
+    background: #fff;
 }
 @media (min-width: 768px) {
     .introducao, .desenvolvimento {
@@ -77,12 +87,43 @@
         align-items: center;
     }
 }
+.introducao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    padding: 10vh 5vw;
+    width: 100%;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+@media (max-width: 900px) {
+    .introducao {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 4vh 4vw;
+    }
+    .introducao .texto, .introducao .imagem {
+        max-width: 100%;
+        padding: 0;
+    }
+}
 .introducao .texto, .desenvolvimento-texto {
     max-width: 40rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     flex: 1;
     z-index: 10;
+}
+.introducao .texto {
+    flex: 1;
+    max-width: 40%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1vh;
+    box-sizing: border-box;
+    padding: 0 2vw;
 }
 .introducao h1, .desenvolvimento h1 {
     font-size: 2.25rem;
@@ -132,6 +173,24 @@
     padding-right: 1.5rem;
     margin-top: 2rem;
 }
+.introducao .imagem {
+    width: 40vw;
+    max-width: 500px;
+    height: auto;
+    box-sizing: border-box;
+    padding: 0 2vw;
+}
+@media (max-width: 900px) {
+    .introducao .imagem {
+        width: 80vw;
+        max-width: 350px;
+        padding: 0;
+    }
+    .introducao .texto {
+        max-width: 100%;
+        padding: 0;
+    }
+}
 @media (min-width: 768px) {
     .imagem, .imagem-cerimonia-desenvolvimento {
         margin-top: 0;
@@ -144,7 +203,7 @@
     transition: transform 0.3s;
     width: 100%;
     max-width: 28rem;
-    cursor: zoom-in;
+    cursor: default;
 }
 .imagem img:hover, .imagem-cerimonia-desenvolvimento img:hover {
     transform: scale(1.05);
@@ -162,7 +221,7 @@
     cursor: pointer;
 }
 .space-y-6 > div:hover {
-    background: #bbf7d0;
+    background: #ffffff;
     border-left: 4px solid #166534;
     box-shadow: 0 8px 32px #a7f3d0;
     transform: scale(1.05);
@@ -221,7 +280,7 @@
     max-width: none;
     height: 320px;
     object-fit: cover;
-    cursor: zoom-in;
+    cursor: default;
 }
 .desenvolvimento-imagens-row img {
     flex: 1 1 0;
@@ -254,7 +313,7 @@
     align-items: flex-start;
 }
 .card-desenvolvimento:hover {
-    background: #bbf7d0;
+    background: #f5f5f5;
     border-left: 4px solid #166534;
     box-shadow: 0 8px 32px #a7f3d0;
     transform: scale(1.05);
@@ -314,7 +373,8 @@
 .desenvolvimento-coluna {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    justify-content: space-between;
     flex: 1 1 0;
     min-width: 0;
     max-width: 400px;
@@ -328,11 +388,11 @@
     max-width: 400px;
     height: 260px;
     object-fit: cover;
-    cursor: zoom-in;
+    cursor: default;
     margin-bottom: 1.2rem;
 }
 .card-desenvolvimento {
-    background: rgba(255,255,255,0.8);
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 1rem;
     box-shadow: 0 2px 8px #a7f3d0;
     border-left: 4px solid #4ade80;
@@ -346,7 +406,7 @@
     margin-top: 0;
 }
 .card-desenvolvimento:hover {
-    background: #bbf7d0;
+    background: #f5f5f5;
     border-left: 4px solid #166534;
     box-shadow: 0 8px 32px #a7f3d0;
     transform: scale(1.05);
@@ -386,6 +446,152 @@
         width: 100%;
         align-items: center;
         text-align: center;
+    }
+}
+
+/* Specific styles for Desenvolvimento cards */
+.desenvolvimento-card-natural {
+    /* Specific styles for Ambiente Natural card */
+    min-height: 500px;
+}
+
+.desenvolvimento-card-conforto {
+    /* Specific styles for Estrutura e Conforto card */
+    min-height: 500px;
+}
+
+.desenvolvimento-card-preparacao {
+    /* Specific styles for Preparação da Cerimônia card */
+    min-height: 500px;
+}
+
+/* Cerimonias Section */
+.cerimonias {
+    width: 100%;
+    background: #fff;
+    padding: 3rem 0 2rem 0;
+}
+
+/* Alinhamento em colunas das imagens e cards de cerimônia */
+.cerimonias-colunas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start; /* Alinha os cards ao topo */
+    gap: 2rem;
+    width: 100%;
+}
+.cerimonia-coluna {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between; /* Garante que o conteúdo ocupe toda a altura */
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    padding: 0 0 2rem 0;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    cursor: pointer;
+    border: none;
+    height: 100%;
+    min-height: 500px; /* Define uma altura mínima consistente */
+}
+.cerimonia-card-ayahuasca, .cerimonia-card-cacau, .cerimonia-card-cogumelo {
+    min-height: 500px; /* Garante alturas uniformes para os cards */
+}
+
+.cerimonia-img-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinha a imagem ao topo do card */
+    flex: 1 0 auto;
+}
+.cerimonia-img-zoom {
+    width: 400px; /* Define largura fixa */
+    height: 600px; /* Define altura fixa */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+    border-radius: 1.5rem 1.5rem 0 0;
+    margin-bottom: 1.2rem;
+    background: #f5f5f5;
+    box-shadow: none;
+    border: none;
+    transition: transform 0.3s;
+}
+.cerimonia-coluna:hover .cerimonia-img-zoom {
+    transform: scale(1.045);
+    box-shadow: none;
+}
+.cerimonia-coluna h2 {
+    color: #222;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+}
+.cerimonia-coluna p {
+    color: #444;
+    font-size: 1.125rem;
+    margin-bottom: 25px;
+    transition: color 0.3s;
+    flex-grow: 1; /* Distribute space evenly */
+}
+.cerimonia-botao {
+    margin: 2rem auto 0; /* Increase the top margin for more spacing */
+    padding: 0.4rem 1rem; /* Further reduce padding */
+    max-width: 150px; /* Limit the button's width */
+    background: #16a34a; /* Mesma cor do botão de agende sua experiência */
+    color: #fff;
+    font-weight: 600;
+    border-radius: 9999px;
+    box-shadow: none;
+    transition: background 0.2s, transform 0.2s;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: inline-block;
+    border: none;
+    margin-top: auto; /* Push button to the bottom */
+}
+.cerimonia-botao:hover {
+    background: #166534;
+    transform: scale(1.07);
+}
+.cerimonias h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #166534;
+    text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 12px #a7f3d0;
+}
+@media (max-width: 900px) {
+    .cerimonias-colunas {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+    .cerimonia-coluna {
+        max-width: 98vw;
+        width: 100%;
+        min-height: 0;
+        height: auto;
+    }
+}
+
+/* Ajuste de responsividade para os cards de cerimônia */
+@media (max-width: 768px) {
+    .cerimonias-colunas {
+        flex-direction: column; /* Alinha os cards em uma única coluna */
+        gap: 1.5rem; /* Ajusta o espaçamento entre os cards */
+    }
+
+    .cerimonia-coluna {
+        max-width: 100%; /* Garante que os cards ocupem toda a largura disponível */
+        min-height: auto; /* Remove a altura mínima fixa para melhor adaptação */
     }
 }
 
