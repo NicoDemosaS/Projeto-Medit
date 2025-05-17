@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', function() {
     const textos = [
-        "TEXTINHO BACANA PARA LUAN VER COMO ESTA OCORRENDO",
+        "Bem-vindo ao Espaço Medit",
         "Espaço Medit 2",
         "Espaço Medit 3",
         "Espaço Medit 4"
