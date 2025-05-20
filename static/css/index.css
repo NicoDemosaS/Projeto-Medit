@@ -61,7 +61,7 @@
     }
 }
 
-/* INTRODUCAO E DESENVOLVIMENTO */
+/* Consolidando estilos de introdução e desenvolvimento */
 .introducao, .desenvolvimento {
     position: relative;
     display: flex;
@@ -71,17 +71,12 @@
     padding-bottom: 3.5rem;
     background-color: #ffffff;
 }
+
 .desenvolvimento {
     background: #fff;
-    /* Remove gradiente verde, se houver */
-    padding-bottom: 2rem; /* Reduzido de 3.5rem para 2rem */
+    padding-bottom: 2rem;
 }
-.desenvolvimento .absolute {
-    display: none;
-}
-.introducao.desenvolvimento {
-    background: #fff;
-}
+
 @media (min-width: 768px) {
     .introducao, .desenvolvimento {
         flex-direction: row;
@@ -89,39 +84,59 @@
         align-items: center;
     }
 }
+
+.botao {
+    margin-top: 1.5rem; /* mt-6 */
+    padding-left: 7rem; /* px-28 */
+    padding-right: 7rem; /* px-28 */
+    padding-top: 1.25rem; /* py-5 */
+    padding-bottom: 1.25rem; /* py-5 */
+    font-size: 1.25rem; /* text-2xl */
+    background-color: var(--cor-botao); /* bg-black */
+    color: var(--cor-secundaria); /* text-white */
+    font-weight: 600; /* font-semibold */
+    border-radius: 0.5rem; /* rounded-lg */
+    transition: background-color 0.3s ease-in-out; /* transition */
+}
+
+.botao:hover {
+    background-color: var(--cor-botao-hover); /* hover:bg-gray-700 */
+}
+
+@media (max-width: 768px) {
+    .introducao {
+        flex-direction: row;
+        text-align: center;
+        padding: 1vh 3vw;
+    }
+
+    .imagem {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .botao {
+        padding-left: 2rem; /* px-8 */
+        padding-right: 2rem; /* px-8 */
+        padding-top: 1rem; /* py-4 */
+        padding-bottom: 1rem; /* py-4 */
+        font-size: 1rem; /* text-lg */
+        margin-bottom: 2rem;
+    }
+}
+
 .introducao {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5vw;
-    padding: 10vh 5vw;
+    padding: 15vh 3vw;
     width: 100%;
     flex-wrap: wrap;
     box-sizing: border-box;
 }
-@media (max-width: 900px) {
-    .introducao {
-        flex-direction: column;
-        gap: 2rem;
-        padding: 5vh 5vw;
-        padding-bottom: 0%;
-    }
-    .introducao .texto, .introducao .imagem {
-        max-width: 100%;
-        padding: 0;
-    }
 
-    .imagem{
-        display: none !important;
-    }
-}
-.introducao .texto, .desenvolvimento-texto {
-    max-width: 40rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    flex: 1;
-    z-index: 10;
-}
+
 .introducao .texto {
     flex: 1;
     max-width: 40%;
@@ -132,29 +147,29 @@
     box-sizing: border-box;
     padding: 0 2vw;
 }
+
 .introducao h1, .desenvolvimento h1 {
-    font-size: 2.25rem;
     font-weight: 800;
     color: #14532d;
     margin-bottom: 1.5rem;
     text-shadow: 0 2px 8px #a7f3d0;
 }
-@media (min-width: 768px) {
-    .introducao h1, .desenvolvimento h1 {
-        font-size: 3rem;
-    }
+
+.introducao .imagem {
+    width: 40vw;
+    max-width: 500px;
+    height: auto;
+    box-sizing: border-box;
+    padding: 0 2vw;
 }
+
 .introducao p, .desenvolvimento p {
-    font-size: 1.125rem;
+    font-size: 2.125rem;
     color: #166534;
     margin-bottom: 2rem;
 }
-@media (min-width: 768px) {
-    .introducao p, .desenvolvimento p {
-        font-size: 1.5rem;
-    }
-}
-.introducao .botao {
+
+.botao {
     background: #16a34a;
     color: #fff;
     font-weight: 700;
@@ -166,10 +181,12 @@
     align-items: center;
     gap: 0.5rem;
 }
-.introducao .botao:hover {
+
+.botao:hover {
     background: #166534;
     transform: scale(1.05);
 }
+
 .imagem, .imagem-cerimonia-desenvolvimento {
     z-index: 10;
     flex: 1;
@@ -180,13 +197,41 @@
     padding-right: 1.5rem;
     margin-top: 2rem;
 }
-.introducao .imagem {
-    width: 40vw;
-    max-width: 500px;
-    height: auto;
-    box-sizing: border-box;
-    padding: 0 2vw;
+
+@media (max-width: 900px) {
+    .introducao {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 5vh 5vw;
+        padding-bottom: 0%;
+    }
+    .introducao .texto, .introducao .imagem {
+        max-width: 100%;
+        padding: 0;
+    }
+    .imagem {
+        display: none !important;
+    }
 }
+
+@media (min-width: 768px) {
+    .introducao h1, .desenvolvimento h1 {
+        font-size: 3rem;
+    }
+}
+
+
+
+@media (min-width: 768px) {
+    .desenvolvimento p {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+
 @media (max-width: 900px) {
     .introducao .imagem {
         width: 80vw;
@@ -196,33 +241,23 @@
     .introducao .texto {
         max-width: 100%;
         padding: 0;
+        font-size: 1.5rem !important;
     }
 }
+
 @media (min-width: 768px) {
     .imagem, .imagem-cerimonia-desenvolvimento {
         margin-top: 0;
-
     }
-    .imagem-cerimonia-desenvolvimento{
+    .imagem-cerimonia-desenvolvimento {
         display: none !important;
     }
 }
+
 @media (max-width: 768px) {
     .imagem-cerimonia-desenvolvimento {
         display: none;
     }
-}
-.imagem img, .imagem-cerimonia-desenvolvimento img {
-    border-radius: 1.5rem;
-    box-shadow: 0 8px 32px #a7f3d0;
-    border: 4px solid #bbf7d0;
-    transition: transform 0.3s;
-    width: 100%;
-    max-width: 28rem;
-    cursor: default;
-}
-.imagem img:hover, .imagem-cerimonia-desenvolvimento img:hover {
-    transform: scale(1.05);
 }
 
 /* Cards interativos desenvolvimento */
@@ -255,7 +290,7 @@
 }
 
 /* Gradientes de transição entre sections */
-.introducao .absolute, .desenvolvimento .absolute {
+.absolute, .desenvolvimento .absolute {
     pointer-events: none;
     z-index: 20;
 }
@@ -746,4 +781,158 @@
     opacity: 1;
     transform: translate(-50%, -50%);
   }
+}
+
+/* Estilização para a seção do médico */
+.medico {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 12rem; /* Aumenta a distância entre imagem e texto */
+    padding: 3rem 5%;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%; /* Limita a largura para centralizar melhor */
+    width: 85%;
+}
+
+.medico-texto {
+    flex: 2; /* Aumenta a largura da parte do texto */
+    max-width: 100%; /* Limita a largura máxima do texto */
+    color: #333;
+}
+
+.medico-texto h1 {
+    font-size: 2.5rem;
+    color: #14532d;
+    margin-bottom: 1rem;
+}
+
+.medico-texto p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.medico-imagem {
+    flex: 1;
+    max-width: 40%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {  
+    .medico {
+        flex-direction: column-reverse;  
+        align-items: center;  
+        text-align: center;  
+        gap: 20px;  
+    }
+
+    .medico-imagem {
+        width: 80%;  
+        max-width: 300px;  
+        margin-bottom: 2rem;  
+    }
+
+    .medico img {
+        width: 80%;  
+        height: auto;  
+    }
+
+    .medico-texto {
+        width: 100%;  
+        font-size: 20px;  
+        text-align: center;
+        margin-bottom: 2vh;
+    }
+
+    .depoimentos {
+        flex-direction: column;  
+        gap: 20px;  
+    }
+}
+
+/* Estilização para a seção de depoimentos */
+.depoimentos-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 5%;
+    border-radius: 10px;
+}
+
+.depoimentos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem; /* aumenta a distância entre vídeo e texto */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 95%; /* aumente se quiser mais espaço */
+    width: 100%;
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+}
+
+.depoimentos-separacao {
+    flex: 1.5; /* aumente para dar mais espaço ao texto */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 600px; /* aumenta o width do texto */
+    width: 100%;
+}
+
+.depoimentos-separacao h1 {
+    font-size: 2rem;
+    color: #14532d;
+    margin-bottom: 1rem;
+    max-width: 100%;
+    text-align: left;
+}
+
+.depoimentos-separacao p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: left;
+}
+
+.video-depoimento1 {
+    width: 100%;
+    max-width: 520px; /* aumente o tamanho da imagem/vídeo */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 0;
+    margin-right: 0;
+}
+
+@media (max-width: 900px) {
+    .depoimentos {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 1rem;
+        max-width: 98vw;
+    }
+    .depoimentos-separacao {
+        padding: 0;
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+    }
+    .video-depoimento1 {
+        max-width: 95vw;
+    }
 }

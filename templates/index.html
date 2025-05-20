@@ -24,7 +24,7 @@
     </header>
 
     <section class="slider">
-        <h1 class="slide-text">Bem-vindo ao Espaço Medit</h1>
+        <h1 class="slide-text">Teste</h1>
         <div class="slider-content">
             <img src="{{ url_for('static', filename='assets/espacomedit.jpeg') }}" class="slide" alt="Slide 1">
             <img src="{{ url_for('static', filename='assets/medite9.jpeg') }}" class="slide" alt="Slide 2">
@@ -35,8 +35,8 @@
     
     <section class="introducao">
         <div class="texto">
-            <h1 class="text-[5px] font-bold md:text-[40px] font-bold">Conecte-se com sua essencia</h1>
-            <p class="text-[0px] md:text-[30px]">Em um ambiente de tranquilidade e harmonia, nosso espaço é dedicado a proporcionar uma jornada de autoconhecimento e cura profunda. Cada cerimônia é conduzida por mestres experientes, que guiarão sua conexão com o sagrado e a sabedoria ancestral.</p>
+            <h1 class="text-[45px] font-bold md:text-[45px] font-bold">Conecte-se com sua essencia</h1>
+            <p class="texto">Em um ambiente de tranquilidade e harmonia, nosso espaço é dedicado a proporcionar uma jornada de autoconhecimento e cura profunda. Cada cerimônia é conduzida por mestres experientes, que guiarão sua conexão com o sagrado e a sabedoria ancestral.</p>
             <a href="{{ url_for('static', filename='agenda.html') }}" class="botao">
                 Agende sua experiência
             </a>            
@@ -91,7 +91,7 @@
                 </div>
                 <h2>Ayahuasca</h2>
                 <p>Uma medicina ancestral utilizada para expansão da consciência e autoconhecimento, guiando a jornada espiritual com profundidade e conexão.</p>
-                <a href="/agenda" class="cerimonia-botao">Agendar</a>
+                <a href="/agenda" class="cerimonia-botao">Saiba mais</a>
             </div>
             <div class="cerimonia-coluna card-desenvolvimento cerimonia-card-cacau">
                 <div class="cerimonia-img-wrapper">
@@ -99,7 +99,7 @@
                 </div>
                 <h2>Cacau</h2>
                 <p>O cacau sagrado abre o coração, promovendo bem-estar, amor e clareza mental em uma experiência suave e harmoniosa.</p>
-                <a href="/agenda" class="cerimonia-botao">Agendar</a>
+                <a href="/agenda" class="cerimonia-botao">Saiba mais</a>
             </div>
             <div class="cerimonia-coluna card-desenvolvimento cerimonia-card-cogumelo">
                 <div class="cerimonia-img-wrapper">
@@ -107,7 +107,7 @@
                 </div>
                 <h2>Cogumelo</h2>
                 <p>Facilitador de introspecção e cura, proporciona vivências profundas de conexão com a natureza, emoções e a própria essência.</p>
-                <a href="/agenda" class="cerimonia-botao">Agendar</a>
+                <a href="/agenda" class="cerimonia-botao">Saiba mais</a>
             </div>
         </div>
     </section>
@@ -115,14 +115,14 @@
     <!-- Area de Apresentacao do Medico, construir CSS-->
     <section class="medico">
         <div class="medico-texto">
-            <h1 class="text-[100px] font-bold">Medico</h1>
-            <h1 class="text-[35px] font-semibold">Doutor Bernardo</h1>
+            <h1 class="text-[40px] md:text-[100px] font-bold leading-tight">Médico</h1>
+            <h2 class="text-[22px] md:text-[35px] font-semibold mt-2">Doutor Bernardo</h2>
             <p class="medico-texto">Dr. Bernardo é um cirurgião experiente e conhecedor da medicina tradicional, que, ao longo dos anos, integrou saberes ancestrais ao seu trabalho. Especialista na ayahuasca, tornou-se um consagrador respeitado, unindo ciência e espiritualidade para promover cura em diferentes níveis.</p>
         </div>
         <img src="{{ url_for('static', filename='assets/medico.jpg') }}" alt="Medico" class="medico-imagem">        
     </section>
     <!-- Area de Depoimentos, construir CSS-->
-    <section>
+    <section class="depoimentos-section">
         <div class="depoimentos">
             <video src="{{ url_for('static', filename='assets/videoteste.mp4') }}" class="video-depoimento1"></video>
             <div class="depoimentos-separacao">
