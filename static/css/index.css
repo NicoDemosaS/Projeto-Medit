@@ -72,10 +72,6 @@
     background-color: #ffffff;
 }
 
-.desenvolvimento {
-    background: #fff;
-    padding-bottom: 2rem;
-}
 
 @media (min-width: 768px) {
     .introducao, .desenvolvimento {
@@ -173,7 +169,7 @@
     background: #16a34a;
     color: #fff;
     font-weight: 700;
-    padding: 0.75rem 2rem;
+    padding: 1.75rem 3rem;
     border-radius: 9999px;
     box-shadow: 0 4px 16px #a7f3d0;
     transition: all 0.3s;
@@ -796,6 +792,8 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 5%;
+    margin-top: 5%;
     max-width: 100%; /* Limita a largura para centralizar melhor */
     width: 85%;
 }
@@ -807,13 +805,13 @@
 }
 
 .medico-texto h1 {
-    font-size: 2.5rem;
+    font-size: 4.5rem;
     color: #14532d;
     margin-bottom: 1rem;
 }
 
 .medico-texto p {
-    font-size: 1.3rem;
+    font-size: 2rem;
     line-height: 1.6;
     color: #555;
 }
@@ -872,18 +870,18 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 3rem; /* aumenta a distância entre vídeo e texto */
+    gap: 3rem;
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 95%; /* aumente se quiser mais espaço */
+    max-width: 1300px; /* aumente o valor aqui para um width maior */
     width: 100%;
     margin: 0 auto;
-    padding: 2.5rem 2rem;
+    padding: 2.5rem 1rem;
 }
 
 .depoimentos-separacao {
-    flex: 1.5; /* aumente para dar mais espaço ao texto */
+    flex: 1.5;
     color: #333;
     display: flex;
     flex-direction: column;
@@ -891,12 +889,12 @@
     align-items: flex-start;
     padding-left: 2rem;
     padding-right: 2rem;
-    max-width: 600px; /* aumenta o width do texto */
+    max-width: 700px; /* aumente o width do texto */
     width: 100%;
 }
 
 .depoimentos-separacao h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     color: #14532d;
     margin-bottom: 1rem;
     max-width: 100%;
@@ -904,7 +902,7 @@
 }
 
 .depoimentos-separacao p {
-    font-size: 1.125rem;
+    font-size: 1.5rem;
     line-height: 1.6;
     color: #555;
     text-align: left;
