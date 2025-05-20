@@ -82,16 +82,16 @@
 }
 
 .botao {
-    margin-top: 1.5rem; /* mt-6 */
-    padding-left: 7rem; /* px-28 */
-    padding-right: 7rem; /* px-28 */
-    padding-top: 1.25rem; /* py-5 */
-    padding-bottom: 1.25rem; /* py-5 */
-    font-size: 1.25rem; /* text-2xl */
+    margin-top: 1.984rem; /* mt-6 aumentado em mais 15% */
+    padding-left: 9.2575rem; /* px-28 aumentado em mais 15% */
+    padding-right: 9.2575rem; /* px-28 aumentado em mais 15% */
+    padding-top: 1.6531rem; /* py-5 aumentado em mais 15% */
+    padding-bottom: 1.6531rem; /* py-5 aumentado em mais 15% */
+    font-size: 1.6531rem; /* text-2xl aumentado em mais 15% */
     background-color: var(--cor-botao); /* bg-black */
     color: var(--cor-secundaria); /* text-white */
     font-weight: 600; /* font-semibold */
-    border-radius: 0.5rem; /* rounded-lg */
+    border-radius: 0.661rem; /* rounded-lg aumentado em mais 15% */
     transition: background-color 0.3s ease-in-out; /* transition */
 }
 
@@ -557,7 +557,6 @@
     /* Specific styles for Preparação da Cerimônia card */
     min-height: 500px;
 }
-
 /* Cerimonias Section */
 .cerimonias {
     width: 100%;
@@ -578,7 +577,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-start; /* Alinha os cards ao topo */
-    gap: 2rem;
+    gap: 2.4rem; /* aumentado em 20% */
     width: 100%;
 }
 .cerimonia-coluna {
@@ -588,19 +587,19 @@
     justify-content: space-between; /* Garante que o conteúdo ocupe toda a altura */
     flex: 1 1 0;
     min-width: 0;
-    max-width: 400px;
+    max-width: 480px; /* aumentado em 20% */
     background: #fff;
-    border-radius: 1rem;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
-    padding: 0 0 2rem 0;
+    border-radius: 1.2rem; /* aumentado em 20% */
+    box-shadow: 0 2.4px 19.2px rgba(0,0,0,0.08); /* aumentado em 20% */
+    padding: 0 0 2.4rem 0; /* aumentado em 20% */
     transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
     cursor: pointer;
     border: none;
     height: 100%;
-    min-height: 500px; /* Define uma altura mínima consistente */
+    min-height: 600px; /* aumentado em 20% */
 }
 .cerimonia-card-ayahuasca, .cerimonia-card-cacau, .cerimonia-card-cogumelo {
-    min-height: 500px; /* Garante alturas uniformes para os cards */
+    min-height: 600px; /* aumentado em 20% */
 }
 
 .cerimonia-img-wrapper {
@@ -611,11 +610,11 @@
     flex: 1 0 auto;
 }
 .cerimonia-img-zoom {
-    width: 400px; /* Define largura fixa */
-    height: 600px; /* Define altura fixa */
+    width: 480px; /* aumentado em 20% */
+    height: 720px; /* aumentado em 20% */
     object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
-    border-radius: 1.5rem 1.5rem 0 0;
-    margin-bottom: 1.2rem;
+    border-radius: 1.8rem 1.8rem 0 0; /* aumentado em 20% */
+    margin-bottom: 1.44rem; /* aumentado em 20% */
     background: #f5f5f5;
     box-shadow: none;
     border: none;
@@ -627,30 +626,31 @@
 }
 .cerimonia-coluna h2 {
     color: #222;
-    font-size: 1.5rem;
+    font-size: 1.8rem; /* aumentado em 20% */
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem; /* aumentado em 20% */
     transition: color 0.3s;
+
 }
 .cerimonia-coluna p {
     color: #444;
-    font-size: 1.125rem;
-    margin-bottom: 25px;
+    font-size: 1.35rem; /* aumentado em 20% */
+    margin-bottom: 30px; /* aumentado em 20% */
     transition: color 0.3s;
     flex-grow: 1; /* Distribute space evenly */
 }
 .cerimonia-botao {
-    margin: 2rem auto 0; /* Increase the top margin for more spacing */
-    padding: 0.4rem 1rem; /* Further reduce padding */
-    max-width: 150px; /* Limit the button's width */
+    margin: 2.4rem auto 0; /* aumentado em 20% */
+    padding: 0.48rem 1.2rem; /* aumentado em 20% */
+    max-width: 180px; /* aumentado em 20% */
     background: #16a34a; /* Mesma cor do botão de agende sua experiência */
     color: #fff;
     font-weight: 600;
-    border-radius: 9999px;
+    border-radius: 11998.8px; /* aumentado em 20% */
     box-shadow: none;
     transition: background 0.2s, transform 0.2s;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.32rem; /* aumentado em 20% */
     display: inline-block;
     border: none;
     margin-top: auto; /* Push button to the bottom */
@@ -660,13 +660,13 @@
     transform: scale(1.07);
 }
 .cerimonias h1 {
-    font-size: 2.5rem;
+    font-size: 3rem; /* aumentado em 20% */
     font-weight: 800;
     color: #166534;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 2.4rem; /* aumentado em 20% */
     letter-spacing: 1px;
-    text-shadow: 0 2px 12px #a7f3d0;
+    text-shadow: 0 2.4px 14.4px #a7f3d0; /* aumentado em 20% */
 }
 @media (max-width: 900px) {
     .cerimonias-colunas {
