@@ -15,7 +15,6 @@ header {
     justify-content: flex-start;
     padding: 20px;
     background-color: var(--cor-principal);
-    
     gap: 40%;
 }
 
@@ -90,69 +89,7 @@ header {
 
 
 
-.introducao {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5vw; /* Espaço entre o texto e a imagem */
-    padding: 10vh 5vw;
-    width: 100%;
-    flex-wrap: wrap; /* Permite quebrar em telas pequenas */
-}
-
-.texto {
-    flex: 1;
-    max-width: 40%; /* Para evitar que o texto fique muito espalhado */
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 1vh;
-}
-
-.imagem {
-    width: 40vw; /* Define um tamanho proporcional */
-    max-width: 500px; /* Limite para não crescer demais */
-    height: auto;
-}
-
-.imagem img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.botao{
-    margin-top: 1.5rem; /* mt-6 */
-    padding-left: 7rem; /* px-28 */
-    padding-right: 7rem; /* px-28 */
-    padding-top: 1.25rem; /* py-5 */
-    padding-bottom: 1.25rem; /* py-5 */
-    font-size: 1.25rem; /* text-2xl */
-    background-color: var(--cor-botao); /* bg-black */
-    color: var(--cor-secundaria); /* text-white */
-    font-weight: 600; /* font-semibold */
-    border-radius: 0.5rem; /* rounded-lg */
-    transition: background-color 0.3s ease-in-out; /* transition */
-}
-
-.botao:hover {
-    background-color: var(--cor-botao-hover); /* hover:bg-gray-700 */
-}
 @media (max-width: 768px) {
-    .introducao {
-        flex-direction: row;
-        text-align: center;
-        padding: 1vh 3vw;
-    }
-
-    .texto {
-        max-width: 100%;
-    }
-
-    .imagem {
-        width: 80%;
-        max-width: 300px;
-    }
     .botao{
         padding-left: 2rem; /* px-8 */
         padding-right: 2rem; /* px-8 */
@@ -334,66 +271,52 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Isso vai cortar e ajustar a imagem para preencher o container */
+    border-radius: 15px;
+    box-shadow: 0 8px 32px #a7f3d0; /* Esfumado verde */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transição suave */
 }
 
-.medico{
+.desenvolvimento-3_imagens img:hover {
+    transform: translateY(-5px); /* Move a imagem levemente para cima */
+    box-shadow: 0 12px 40px #bbf7d0; /* Intensifica o esfumado verde no hover */
+}
+
+
+
+/* Estilização para a seção de depoimentos */
+.depoimentos {
     display: flex;
-    flex-direction: row;
-    justify-content: center; /* Centraliza verticalmente (caso precise) */
-    margin-top: 5%;
-    gap: 8%;
-}
-.medico img{
-    width: 518px;
-    height: 486px;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 5%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.medico-texto{
-    width: 650px;
-    height: 686px;
-    text-align: left;
-    font-size: 30px;
-    color: var(--cor-texto);
+.depoimentos-separacao {
+    flex: 1;
+    color: #333;
 }
 
-.depoimentos{
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    align-items: center;
-    justify-content: center; /* Centraliza verticalmente (caso precise) */
+.depoimentos-separacao h1 {
+    font-size: 2rem;
+    color: #14532d;
+    margin-bottom: 1rem;
+}
+
+.depoimentos-separacao p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.video-depoimento1 {
     width: 100%;
-    gap: 6%;
-    margin-top: 3%;
-
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-@media (max-width: 768px) {  
-    .medico {
-        flex-direction: column-reverse;  
-        align-items: center;  
-        text-align: center;  
-        gap: 20px;  
-    }
-
-    .medico img {
-        width: 80%;  
-        height: auto;  
-    }
-
-    .medico-texto {
-        width: 90%;  
-        font-size: 20px;  
-        text-align: center;
-        margin-bottom: 8vh;
-    }
-
-    .depoimentos {
-        flex-direction: column;  
-        gap: 20px;  
-    }
-}
-
 
 .depoimentos-separacao{
     width: 600px;
@@ -703,6 +626,16 @@ header {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     pointer-events: none; /* Garante que o texto não interfira na interação com o slider */
     z-index: 10;
+
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .slide-text {
+        font-size: 1.5rem; /* Tamanho do texto reduzido para telas menores */
+    }
+    
 }
 
 
