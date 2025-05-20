@@ -129,7 +129,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5vw;
+    gap: 3vw;
     padding: 15vh 3vw;
     width: 100%;
     flex-wrap: wrap;
@@ -139,7 +139,7 @@
 
 .introducao .texto {
     flex: 1;
-    max-width: 40%;
+    max-width: 70%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -156,8 +156,8 @@
 }
 
 .introducao .imagem {
-    width: 40vw;
-    max-width: 500px;
+    width: 60vw;
+    max-width: 650px;
     height: auto;
     box-sizing: border-box;
     padding: 0 2vw;
