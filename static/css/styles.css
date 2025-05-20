@@ -8,19 +8,45 @@
     --cor-botao: #000000; /* Cor do botão */
     --cor-botao-hover: #4b5563; /* Cor do botão ao passar o mouse */
     --cor-divider: #000000; /* Cor da linha divisória */
+    --cor-destaque: #14532d; /* Verde escuro para títulos e divisores */
+    --cor-subtitulo: #C89E4F; /* Dourado para subtítulos */
+    --cor-fundo-secao: #f4f4f4; /* Fundo suave para seções */
 }
 
+/* Microanimações para botões */
+.botao, button, .faq-btn {
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    background: var(--cor-subtitulo);
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    padding: 0.7em 2em;
+    box-shadow: 0 2px 8px #c89e4f33;
+}
+.botao:hover, button:hover, .faq-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px #c89e4f33;
+    background: var(--cor-destaque);
+    color: #fff;
+}
+
+/* Header sticky para navegação fixa */
 header {
     display: flex;
     justify-content: flex-start;
     padding: 20px;
-    background-color: var(--cor-principal);
+    background-color: var(--cor-destaque);
     gap: 40%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
 .logo a:hover {
     color: gray;
-  }
+}
 
 .logo {
     font-size: 20px;
@@ -38,7 +64,7 @@ header {
     justify-content: center; /* Centraliza os itens */
 }
 
-.hrefs a:hover{
+.hrefs a:hover {
     color: var(--cor-hover);
 }
 
@@ -50,11 +76,10 @@ header {
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .logo{
+    .logo {
         padding-left: 0%;
         padding-top: 2%;
     }
-
 
     .menu-toggle {
         display: block;
@@ -81,16 +106,13 @@ header {
         display: flex;
     }
 
-    .imagem{
+    .imagem {
         display: none;
     }
 }
 
-
-
-
 @media (max-width: 768px) {
-    .botao{
+    .botao {
         padding-left: 2rem; /* px-8 */
         padding-right: 2rem; /* px-8 */
         padding-top: 1rem; /* py-4 */
@@ -98,7 +120,6 @@ header {
         font-size: 1rem; /* text-lg */
     }
 }
-
 
 .desenvolvimento-2 {
     display: flex;
@@ -114,6 +135,8 @@ header {
     width: 704px;
     height: 704px; /* Garante que a altura e a largura sejam iguais, formando um quadrado */
     overflow: hidden; /* Oculta qualquer parte da imagem que ultrapasse o tamanho do container */
+    opacity: 0;
+    animation: fadeIn 1.2s forwards;
 }
 
 .imagem_cerimonia_desenvolvimento-2 img {
@@ -123,7 +146,7 @@ header {
 }
 
 .desenvolvimento-2_texto {
-    max-width: 600px; 
+    max-width: 600px;
     display: flex;
     flex-direction: column; /* Alinha os itens na coluna */
     gap: 30px; /* Adiciona espaçamento entre os elementos filhos */
@@ -150,8 +173,8 @@ header {
         gap: 10px;
     }
 
-    .desenvolvimento-3{
-        display: none !important; 
+    .desenvolvimento-3 {
+        display: none !important;
     }
 }
 
@@ -171,6 +194,8 @@ header {
     max-width: 600px;
     height: auto;
     overflow: hidden; /* Oculta partes excedentes da imagem */
+    opacity: 0;
+    animation: fadeIn 1.2s forwards;
 }
 
 .imagem-cerimonia-desenvolvimento img {
@@ -184,7 +209,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 20px; /* Espaçamento entre os elementos filhos */
-    font-size: 32git px;
+    font-size: 32px;
     color: var(--cor-texto);
 }
 
@@ -231,6 +256,8 @@ header {
     width: 100%;
     height: auto;
     border-radius: 10px;
+    opacity: 0;
+    animation: fadeIn 1.2s forwards;
 }
 
 .cerimonia p {
@@ -249,7 +276,7 @@ header {
     }
 }
 
-.desenvolvimento-3{
+.desenvolvimento-3 {
     width: 100%;
     margin-top: 20px;
     display: flex;
@@ -257,7 +284,7 @@ header {
     justify-content: center;
     flex-direction: row;
 }
-.desenvolvimento-3_imagens{
+.desenvolvimento-3_imagens {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -266,6 +293,8 @@ header {
     width: 85%;
     height: 437px; /* Garante que a altura e a largura sejam iguais, formando um quadrado */
     overflow: hidden; /* Oculta qualquer parte da imagem que ultrapasse o tamanho do container */
+    opacity: 0;
+    animation: fadeIn 1.2s forwards;
 }
 .desenvolvimento-3_imagens img {
     width: 100%;
@@ -281,16 +310,14 @@ header {
     box-shadow: 0 12px 40px #bbf7d0; /* Intensifica o esfumado verde no hover */
 }
 
-
-
 /* Estilização para a seção de depoimentos */
 .depoimentos {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     padding: 3rem 5%;
-    background-color: #ffffff;
-    border-radius: 10px;
+    background-color: var(--cor-fundo-secao);
+    border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -318,50 +345,52 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.depoimentos-separacao{
+.depoimentos-separacao {
     width: 600px;
     gap: 20px;
 }
 
-.video-depoimento, .video-depoimento1{
-    width: 550px;  /* Largura */
+.video-depoimento, .video-depoimento1 {
+    width: 550px; /* Largura */
     height: 450px; /* Altura */
     object-fit: cover; /* Garante que o vídeo preencha o quadrado */
-
 }
 
-@media (max-width: 768px) {  
+@media (max-width: 768px) {
     .depoimentos-separacao {
-        width: 90%;  
-        gap: 10px;  
+        width: 90%;
+        gap: 10px;
     }
 
-    .video-depoimento1{
+    .video-depoimento1 {
         display: none !important;
     }
 
     .video-depoimento {
-        width: 90%;  
-        height: auto;  
+        width: 90%;
+        height: auto;
     }
-    .depoimentos{
+    .depoimentos {
         display: flex;
         flex-direction: column-reverse;
     }
 }
 
-.FAQ{
+.FAQ {
     display: flex;
     flex-direction: row;
     justify-content: center; /* Centraliza verticalmente (caso precise) */
-    text-align: left; 
+    text-align: left;
     gap: 100px;
     margin-top: 35px;
     margin-bottom: 55px;
+    background-color: var(--cor-fundo-secao);
+    border-radius: 12px;
+    padding: 2.5rem 1.5rem;
 }
 
 .FAQ-texto, .FAQ-texto2 {
-    max-width: 600px; 
+    max-width: 600px;
     display: flex;
     flex-direction: column; /* Alinha os itens na coluna */
     gap: 30px; /* Adiciona espaçamento entre os elementos filhos */
@@ -413,17 +442,30 @@ header {
 .faq-btn {
     width: 100%;
     padding: 10px;
-    background: #4CAF50;
+    background: var(--cor-subtitulo);
     color: white;
     border: none;
     cursor: pointer;
     text-align: left;
     font-size: 20px;
     transition: background 0.3s;
+    border-radius: 8px;
+    font-weight: 600;
+}
+.faq-btn::after {
+    content: '\002B'; /* + */
+    float: right;
+    font-size: 1.2em;
+    transition: transform 0.3s;
+}
+.faq-item.active .faq-btn::after {
+    content: '\2212'; /* - */
+    transform: rotate(180deg);
 }
 
 .faq-btn:hover {
-    background: #45a049;
+    background: var(--cor-destaque);
+    color: #fff;
 }
 
 .faq-item.active .faq-answer {
@@ -431,9 +473,8 @@ header {
     opacity: 1;
 }
 
-@media (max-width: 768px) {  
-    .FAQ
-     {
+@media (max-width: 768px) {
+    .FAQ {
         flex-direction: column; /* Empilha os itens no mobile */
         gap: 30px; /* Reduz o espaço entre os itens */
         text-align: center; /* Centraliza o texto */
@@ -444,12 +485,22 @@ header {
     }
 }
 
-
+@media (max-width: 480px) {
+    .galeria-container {
+        margin: 2rem 0.5rem;
+    }
+    .frase-footer {
+        font-size: 14px;
+    }
+    .FAQ-texto, .FAQ-texto2 {
+        font-size: 16px;
+    }
+}
 
 /* Estilos do footer movidos do index.html */
 .footer {
     background-color: var(--cor-footer);
-    color: var(--cor-secundaria);
+    color: #fff !important;
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -492,11 +543,12 @@ header {
     font-weight: bold;
     max-width: 450px;
     text-align: center;
+    color: #fff !important;
 }
 
 .contact-info {
     font-size: 24px;
-    color: var(--cor-secundaria);
+    color: #fff !important;
 }
 
 .social-icons {
@@ -563,10 +615,52 @@ header {
 
 .section-divider {
     border: none;
-    border-top: 2px dashed var(--cor-divider); /* Linha tracejada */
-    margin: 10px 0; /* Espaçamento vertical */
+    border-top: 3px dashed var(--cor-subtitulo);
+    margin: 32px 0;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.7;
 }
 
+/* Títulos com hierarquia visual */
+h1, h2, h3 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+h1, .titulo-principal {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 2.8rem;
+    color: var(--cor-destaque);
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 1.2rem;
+    line-height: 1.1;
+}
+h2, .subtitulo {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 2rem;
+    color: var(--cor-subtitulo);
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
+}
+h3 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1.4rem;
+    color: var(--cor-destaque);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+p, li, .texto-padrao {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.08rem;
+    color: var(--cor-texto);
+    line-height: 1.7;
+    margin-bottom: 0.7rem;
+}
 
 /* Estilos para o carrossel de imagens */
 .slider {
@@ -574,6 +668,9 @@ header {
     height: 76vh; /* Altura responsiva baseada na altura da viewport */
     overflow: hidden; /* Esconde as imagens fora da área visível */
     position: relative;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 }
 @media (max-width: 768px) {
     .slider {
@@ -583,7 +680,6 @@ header {
         position: relative;
     }
 }
-
 
 .slider-content {
     display: flex; /* Alinha as imagens horizontalmente */
@@ -596,6 +692,8 @@ header {
     height: 100%; /* Preenche toda a altura do slider */
     flex-shrink: 0; /* Garante que as imagens não encolham */
     object-fit: cover; /* Ajusta a imagem para cobrir o container */
+    opacity: 0;
+    animation: fadeIn 1.2s forwards;
 }
 
 .slide img {
@@ -607,7 +705,7 @@ header {
 
 @media (max-width: 768px) {
     .slide {
-        height: 450px; /* Aumenta a altura vertical das imagens do carrossel no mobile */
+        height: 550px; /* Aumenta a altura vertical das imagens do carrossel no mobile */
         object-fit: cover;
         margin: 0;
         padding: 0;
@@ -633,15 +731,15 @@ header {
     .slide-text {
         font-size: 1.5rem; /* Tamanho do texto reduzido para telas menores */
     }
-    
 }
-
-
 
 /* Estilos para a galeria de imagens */
 .galeria {
     padding: 40px 20px;
-    background-color: #f8f8f8;
+    background-color: var(--cor-fundo-secao);
+    border-radius: 12px;
+    padding: 2.5rem 1.5rem;
+    margin-bottom: 2.5rem;
 }
 
 .galeria-container {
@@ -660,17 +758,21 @@ header {
     border-radius: 8px;
     overflow: hidden;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .galeria-item img {
     width: 100%;
     height: auto;
     display: block;
+    opacity: 0;
+    animation: fadeIn 1.2s forwards;
 }
 
 .galeria-item:hover {
     transform: scale(1.15);
+    box-shadow: 0 8px 32px #c89e4f33;
+    border: 2px solid var(--cor-hover);
 }
 
 .modal {
@@ -729,4 +831,8 @@ header {
         flex: 1 1 100%; /* Um item por linha em telas muito pequenas */
         max-width: 100%;
     }
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
 }
