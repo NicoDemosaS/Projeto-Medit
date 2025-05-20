@@ -607,13 +607,11 @@ header {
 
 @media (max-width: 768px) {
     .slide {
-        height: 300px; /* Define uma altura fixa para imagens no mobile */
-        object-fit: cover; /* Mantém o preenchimento do container */
-        margin: 0, 0 ,0 ,0; /* Remove margens superiores */
-        padding: 0,0,0,0; /* Remove espaçamentos internos */
+        height: 450px; /* Aumenta a altura vertical das imagens do carrossel no mobile */
+        object-fit: cover;
+        margin: 0;
+        padding: 0;
     }
-
-  
 }
 
 .slide-text {
