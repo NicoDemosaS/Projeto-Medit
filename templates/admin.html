@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Painel de Administração</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body { background: #f8f8f8; font-family: Arial, sans-serif; }
+        .admin-container { max-width: 500px; margin: 8vh auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 16px #0001; padding: 2.5rem 2rem; text-align: center; }
+        h1 { color: #14532d; margin-bottom: 1.5rem; }
+        .logout-btn { margin-top: 2rem; background: #14532d; color: #fff; border: none; border-radius: 6px; padding: 0.7rem 2.5rem; font-weight: bold; cursor: pointer; }
+        .logout-btn:hover { background: #166534; }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        <h1>Painel de Administração</h1>
+        <p>Bem-vindo, administrador!</p>
+        <p>Esta é uma página temporária de admin.<br>Em breve você poderá gerenciar conteúdos do site por aqui.</p>
+        <a href="{{ url_for('logout') }}"><button class="logout-btn">Sair</button></a>
+    </div>
+</body>
+</html>

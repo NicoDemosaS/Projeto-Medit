@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Login do Administrador</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body { display: flex; align-items: center; justify-content: center; height: 100vh; background: #f8f8f8; }
+        .login-box { background: #fff; padding: 2rem 2.5rem; border-radius: 12px; box-shadow: 0 2px 16px #0001; min-width: 320px; }
+        .login-box h2 { margin-bottom: 1.5rem; color: #14532d; }
+        .login-box input { width: 100%; padding: 0.7rem; margin-bottom: 1rem; border-radius: 6px; border: 1px solid #ccc; }
+        .login-box button { width: 100%; padding: 0.7rem; border-radius: 6px; background: #14532d; color: #fff; font-weight: bold; border: none; }
+        .login-box .error { color: #c00; margin-bottom: 1rem; }
+    </style>
+</head>
+<body>
+    <form class="login-box" method="post">
+        <h2>Login do Administrador</h2>
+        {% if error %}
+            <div class="error">{{ error }}</div>
+        {% endif %}
+        <input type="text" name="username" placeholder="Usuário" required>
+        <input type="password" name="password" placeholder="Senha" required>
+        <button type="submit">Entrar</button>
+    </form>
+</body>
+</html>
